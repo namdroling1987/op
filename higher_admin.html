@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Administration</title>
+    <style>  
+    body{
+     margin:0 auto;
+     min-width:352px;
+     
+    }
+    *{
+      margin:0;
+      padding:0;
+    }
+    .banner-img-container{
+      display:flex;
+    }
+    .top-banner{
+      margin:0 auto;
+      width:90%;
+      margin-bottom:20px;
+    }
+    .backdrop-container{
+      display:none;
+    }
+    .menubar{
+      display:flex;
+      flex-wrap:wrap;
+      list-style:none;
+      align-items:space-between;
+      display:none;
+      font-size:30px;
+      font-weight:bold;
+    }
+    
+    li{
+      list-style:none;
+    }
+    a{
+      text-decoration:none;
+      font-size:25px;
+    }
+    .hameburger{
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      background-color:rgb(77, 10, 10);
+      padding:10px;
+      border-radius:4px;
+    }
+    
+    .hameburger.active .bar:nth-child(2){
+      opacity:0;  
+    }
+    .hameburger.active .bar:nth-child(1){
+      transform: translateY(10px) rotate(45deg);
+    }
+    .hameburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .navbar{
+      position:fixed;
+      left:-100%;
+      top:50px; 
+    }
+    .nav-menu{
+      background-color:rgb(121, 37, 37);
+      height:100vh;
+      width:400px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:45px;
+      top:30px;  
+    }
+
+    .navbar.active{
+      left:0;
+
+    }
+    .main-menu ul li a{
+        color:brown;	
+		}
+	  .main-menu ul li a:hover{
+			color:rgb(219, 221, 112);
+		}
+		nav ul li a{
+			font-size:40px;
+			color:white;
+			margin-top:40px;
+		}
+		nav ul li a:hover{
+			color:yellow;
+		}
+    .bar{
+      display:block;
+      width:30px;
+      height:4px;
+      margin:5px auto;
+        -webkit-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+        background-color:rgb(255, 255, 255);
+    }
+
+
+    .main-body{
+        width:80%;
+        margin:0 auto;
+    }
+    .photo-text1{
+        width:100%;
+        margin-top:30px;
+    }
+    p{
+        font-size:25px;
+        text-align: justify;
+        line-height: 40px;
+    }
+    .penor-rinpoche{
+        width:100%;
+        max-width:500px;
+        margin-top:20px;
+        margin-bottom:20px;
+        border-radius:10px;
+        
+          
+    }
+    .heading{
+        display:flex;
+        justify-content:center;
+        margin-bottom:30px;
+        color:green;
+    }
+    .red-line{
+        margin:0 auto;
+        width:100%;
+        margin-top:20px;
+    }
+    .red-bar-image{
+        width:100%;
+        margin:0 auto;
+    }
+    .back-to-menu{
+        display:flex;
+        justify-content:center;
+    }
+
+
+    .back-to-menu-end{
+        display:flex;
+        flex-direction:column;
+        gap:50px;
+        margin:0 auto;
+        align-items:center;
+        justify-content:center;
+        
+    }
+    .end-red-line{
+        margin-top:50px;
+    }
+    .end-talk{
+        text-align:center;
+    }
+
+    .sub-menu ul {
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding-top:-4px;
+    }
+   
+    .sub-menu ul li a{
+        color:brown;
+        font-weight:bold;
+        font-size:25px;
+    }
+    .sub-menu ul li a:hover{
+        color:rgb(14, 80, 14);
+    }
+
+
+    /*css written for this pags*/
+    .karma-kuchen{
+      width:100%;
+      max-width:400px;
+    }
+    .gyankang-rinpochey{
+      width:100%;
+      max-width:400px;
+    }
+    .muksang-kuchen{
+      width:100%;
+      max-width:400px;
+    }
+    .kenchen-pema{
+      width:100%;
+      max-width:400px;
+    }
+    .kenchen-namdrol{
+      width:100%;
+      max-width:400px;
+    }
+    .kenchen-tsewang{
+      width:100%;
+      max-width:400px;
+    }
+    @media only screen and ( min-width:726px){
+        .karma-kuchen{
+          float:left;
+          margin:10px;
+        }
+        .gyankang-rinpochey{
+          float:right;
+          margin:10px;
+
+        
+        }
+        .muksang-kuchen{
+          float:left;
+          margin:10px;
+        }
+        .kenchen-pema{
+          float:right;
+          margin:10px;
+        }
+        .kenchen-namdrol{
+          float:left;
+          margin:10px;
+        }
+        .kenchen-tsewang{
+          float:right;
+          margin:10px;
+        }
+
+    }
+    
+
+   
+        
+        @media only screen and ( min-width:768px){
+          .menubar{
+            display:block;
+            display:flex;
+            flex-wrap:wrap;
+            list-style:none;
+            align-items:space-between;
+            column-gap:20px;
+            
+          }
+          .nav-menu{
+            display:none;
+
+          }
+          .hameburger{
+            display:none;
+          }
+          .content{
+            height:400px;
+            width:500px;
+            margin-top:50px;
+            margin-bottom:50px;
+
+          }
+         
+          .main-menu{
+            max-width:1000px;
+            margin:0 auto;
+          }
+          .red-bar-image{
+            display:block;
+            max-width:790px;
+            margin:0 auto;
+          }
+          .menubar li{
+            margin:0 auto;
+            padding:1%;
+            color:brown;
+
+          }
+          .menubar li:hover{
+            color:yellow;
+            cursor:pointer;
+          }
+          .menubar li:active{
+            color:brown;
+            cursor:progress;
+          }
+          .sub-flex{
+            margin:0 auto;
+            display:flex;
+            flex-direction:row;
+            column-gap: 20px;
+          }
+          .backdrop-container{
+            display:block;
+            margin:0 auto;
+            max-width:1000px;
+          }
+          .top-banner{
+            display:none;
+          }
+          
+          
+
+        }
+
+        @media only screen and (min-width:1280px){
+          body{
+            max-width:1280px;
+          }
+          .main-menu{
+            font-size:30px;
+            font-weight:bold;
+          }
+          
+          .red-bar-image{
+            margin-top:5px;
+          }
+          
+        }
+    </style>
+
+<body vlink="black">
+    <div class="header"></div>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" >མདུན་ངོས།</a></li> 
+          <li class="nav-item"><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+          <li class="nav-item"><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+          <li class="nav-item"><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+          <li class="nav-item"><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུནལས།</a></li>
+          <li class="nav-item"><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+          <li class="nav-item"><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+          <li class="nav-item"><a href="teachers.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+          <li class="nav-item"><a href="teachers.html">སློབ་དཔོན་རྣམས།</a></li>
+          <li class="nav-item"><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+          <li class="nav-item"><a href="gallary.html">བརྙན་པར།</a></li>
+          <li class="nav-item"><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+          <li class="nav-item"><a href="library">ཆོས་མཛོད།</a></li>
+        </ul>
+      </nav>
+      <div class="hameburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div id="mainmenu" class="banner-img-container">
+      
+        <img  class="top-banner"src="images/backdrop_480_9.png">
+    </div>
+    <div class="backdrop-container">
+      <img class="backdrop-image"src="images/backdrop_default13.png">
+    </div>
+    <div class="main-menu">
+      <ul class="menubar">
+        <li><a href="index.html">མདུན་ངོས།</a></li> 
+        <li><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+        <li><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+        <li><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+        <li><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུན་ལས།</a></li>
+        <li><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+        <li><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+        <li><a href="nni_graduate.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+        <li><a href="nni_graduate.html">སློབ་དཔོན་རྣམས།</a></li>
+        <li><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+        <li><a href="gallary.html">བརྙན་པར།</a></li>
+        <li><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+        <li><a href="library.html">ཆོས་མཛོད།</a></li>
+      </ul>
+    </div>
+    
+    <div class="main-body">
+        <img class="red-bar-image"src="images/line_470x10_trans.png">
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#kaRmakuchen">༸སྐྱབས་རྗེ་ཀརྨ་སྐུ་ཆེན་རིན་པོ་ཆེ།</a></li>
+                    <li><a href="#gyAngkang">མཁན་སྤྲུལ་གྱང་ཁང་རིན་པོ་ཆེ།</a></li>
+                    <li><a href="#muKsang">མཆོག་སྤྲུལ་རྨུགས་སངས་སྐུ་ཆེན་རིན་པོ་ཆེ།</a></li>
+                    <li><a href="#peMasherap">མཁན་ཆེན་པདྨ་ཤེས་རབ།</a></li>
+                    <li><a href="#naMdrol">མཁན་ཆེན་རྣམ་གྲོལ་ཚེ་རིང་།</a></li>
+                    <li><a href="#tsEwang">མཁན་ཆེན་ཚེ་དབང་རྒྱ་མཚོ།</a></li>
+                </ul>
+            </div>
+    
+        <img class="red-line"src="images/line_470x10_trans.png">
+        <div id="kaRmakuchen"class="photo-text1">
+                  <p class="heading">༸སྐྱབས་རྗེ་ཀརྨ་སྐུ་ཆེན་རིན་པོ་ཆེ།།</p>
+            <p>
+              ༸སྐྱབས་རྗེ་ཀརྨ་སྐུ་ཆེན་ཐུབ་བསྟན་ཚུལ་ཁྲིམས་ནོར་བུ་འོད་ཟེར་ཀུན་ཁྱབ་དཔལ་བཟང་པོ་མཆོག་ནི། ཕྱི་ལོ་ ༡༩༧༠ ཟླ་ ༨ ཚེས་ ༢༨ ཉིན་སྐུ་འཁྲུངས། <img class="karma-kuchen" src="images/karma_900.jpg">༸སྐྱབས་རྗེ་བདུད་འཇོམས་རིན་པོ་ཆེ་མཆོག་གིས་དཔལ་ཡུལ་བའི་གདན་རབས་བཅུ་པ་ཀརྨ་ཐེག་མཆོག་སྙིང་པོའི་ཡང་སྲིད་དུ་ངོས་འཛིན་མཛད། 
+             ཕྱི་ལོ་ ༡༩༧༥ ལོར་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེ་མཆོག་གིས་རྣམ་གྲོལ་གླིང་དུ་གདན་དྲངས་ཏེ་གསེར་ཁྲིར་མངའ་གསོལ་མཛད། གནས་མཆོག་རྡོ་རྗེ་གདན་དུ་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེ་མཆོག་གི་སྐུ་མདུན་ནས་དགེ་ཚུལ་སྔོན་དུ་འགྲོ་བའི་བསྙེན་རྫོགས་ཀྱི་སྡོམ་པ་ལེགས་པར་མནོས་ཤིང་། ཐུབ་བསྟན་ཚུལ་ཁྲིམས་ནོར་བུ་འོད་ཟེར་ཀུན་ཁྱབ་དཔལ་བཟང་པོ་ཞེས་མཚན་གྱི་ཅོད་པན་བསྩལ། ཐུན་མོང་གི་རིག་གནས་དང་། རྒྱལ་བ་གོང་མའི་ཕྱག་བཞེས་རྣམས་ལ་སྦྱང་བརྩོན་ལེགས་པར་མཛད་ཅིང་། རིམ་བཞིན་སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་དུ་བཞུགས་ནས་གཞུང་ཆེན་སོགས་ལ་གསན་བསམ་གནང་། གཞན་ཡང་༸སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་མཆོག་དང་། ༸སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གིས་གཙོས་དགེ་བའི་བཤེས་གཉེན་དུ་མ་ལས་ཐུན་མོང་དང་ཐུན་མིན་གྱི་ཟབ་ཆོས་རྣམས་བུམ་པ་གང་བྱོའི་ཚུལ་དུ་ཞུས་ནས་ཐུགས་རྒྱུད་དང་འདྲེས་པར་མཛད།
+              
+              ཕྱི་ལོ་ ༡༩༩༤ ལོར་༸སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གི་བཀའ་དགོངས་ལྟར་ཤར་རྒྱལ་བ་དཔལ་ཡུལ་བའི་གདན་ས་རྣམ་རྒྱལ་བྱང་ཆུབ་ཆོས་གླིང་དུ་ཞབས་སོར་འཁོད་དེ། ཕྱི་ལོ་ ༢༠༠༠
+              ལོར་དཔལ་ཡུལ་བའི་གདན་རབས་བཅུ་གཉིས་པའི་ཆོས་ཀྱི་ཁྲི་འཕང་མཐོན་པོར་མངའ་གསོལ་མཛད་ནས། ད་ལྟའི་བར་རྒྱལ་ཕྱི་ནང་གི་དཔལ་ཡུལ་བའི་མ་དགོན་ཡན་ལག་དང་བཅས་པ་ལ་གཟིགས་སྐྱོང་དང་། རྒྱལ་བསྟན་སྤྱི་དང་བྱེ་བྲག་སྔ་འགྱུར་བའི་བསྟན་པ་འཛིན་སྐྱོང་སྤེལ་གསུམ་མཛད་དང་མཛད་མུས་སུ་བཞུགས་བཞིན་པའོ།།
+               
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+    
+        </div>
+
+        <div id="gyAngkang"class="photo-text1">
+                    <p class="heading"> མཁན་སྤྲུལ་གྱང་ཁང་རིན་པོ་ཆེ་མཆོག་ནི།</p>
+            <p>
+                <img class="gyankang-rinpochey"src="images/ga_879.jpg">
+               
+                  ཕྱི་ལོ་ ༡༩༧༢ ལོར་རྒྱ་གར་ལྷོ་ཕྱོགས་སྦེལ་ཀོབ་ཏུ་སྐུ་འཁྲུངས་ཤིང༌།་འདིར་གདན་དྲངས་ཏེ་ཁྲི་འདོན་མཛད། གཞན་ཡང་༸སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་དང༌། ༸སྐྱབས་རྗེ་རྡོ་གྲུབ་རིན་པོ་ཆེ། ༸མཁན་ཆེན་འཇིགས་མེད་ཕུན་ཚོགས། སྨྱོ་ཤུལ་མཁན་རིན་པོ་ཆེ་སོགས་ལས་དབང་ལུང་ཁྲིད་གསུམ་གསན། ཁྱད་པར་དུ་༸སྐྱབས་རྗེ་རིན་པོ་ཆེ་མཆོག་གི་མདུན་ནས་བཀའ་གཏེར་སྤྱི་དང༌། གནམ་ཆོས་ཀྱི་ཆོས་སྐོར་མཐའ་དག་བུམ་པ་གང་བྱོའི་ཚུལ་དུ་གསན། ཕྱི་ལོ་ ༡༩༩༤ ལོར་རྡོར་གདན་བྱང་ཆུབ་ཤིང་དྲུང་དུ་༸སྐྱབས་རྗེ་མཆོག་གི་དྲུང་ནས་བསྙེན་རྫོགས་ཀྱི་སྡོམ་པ་ཞུས། ༡༩༨༦ ལོར་སྔ་འགྱུར་མཐོ་སློབ་འདི་ཉིད་དུ་ཞུགས་ནས་མདོ་སྔགས་རིག་གཞུང་དང་བཅས་པ་ལ་ཐོས་བསམ་མཛད་དེ། ༡༩༩༥ ལོར་བསླབ་པ་མཐར་ཕྱིན་པ་ནས་བཟུང་བཤད་གྲྭའི་སློབ་གཉེར་བ་རྣམས་ལ་དཔེ་ཁྲིད་དང་མཐོ་སློབ་འདི་ཉིད་ཀྱི་ཚོགས་གཙོ་དང༌། ཚོགས་གཞོན།
+
+                  དེ་བཞིན་དུ་རྩོམ་སྒྲིག་ལྷན་ཁང་དུ་ལོ་གསུམ་ཙམ་ཕྱག་ལས་གནང་ཞིང་། སྔ་ཕྱི་བར་གསུམ་དུ་རྩོམ་སྒྲིག་ཁང་འདི་ཉིད་ལ་མཐུན་རྐྱེན་གྱི་རྒྱབ་སྐྱོར་གང་མང་གནང་ཡོད། ཕྱི་ལོ་ ༡༩༩༩ ལོར་༸སྐྱབས་རྗེ་རིན་པོ་ཆེས་མཁན་པོའི་མཚན་གནས་བསྩལ།
+                  དེ་ནས་ཕྱི་རྒྱལ་ཡུལ་གྲུ་ཁག་ཏུ་ཆོས་བཤད་དབང་བསྐུར་གྱིས་གདུལ་བྱ་རྣམས་སྨིན་ཅིང་གྲོལ་བར་མཛད། ད་ཆ་༸སྐྱབས་རྗེ་རིན་པོ་ཆེ་ཞིང་དུ་གཤེགས་རྗེས་དགོན་འདིའི་དབུ་འཛིན་གྱི་འགན་བཞེས་ཏེ་རྒྱལ་བསྟན་འཛིན་སྐྱོང་སྤེལ་གསུམ་གནང་མུས་བཅས་སོ།།
+          
+               
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="muKsang"class="photo-text1">
+            <p class="heading">མཆོག་སྤྲུལ་རྨུགས་སངས་སྐུ་ཆེན་རིན་པོ་ཆེ་མཆོག</p>
+            <p>           
+              <img class="muksang-kuchen" src="images/ms_833.jpg">
+                ཕྱི་ལོ་ ༡༩༧༤ ལ་བལ་ཡུལ་དུ་སྐུ་འཁྲུངས། དགུང་གྲངས་གསུམ་པར་༸སྐྱབས་རྗེ་མཆོག་ནས་དགོན་འདིར་གདན་དྲངས་ཏེ་ཐུགས་བརྩེ་ཆེན་པོས་བསྐྱངས། དགུང་ལོ་བཞིའི་ཐོག་༸སྐྱབས་རྗེ་རྡོ་གྲུབ་རིན་པོ་ཆེའི་དྲུང་ནས་རིན་ཆེན་གཏེར་མཛོད་ཆེན་མོའི་བཀའ་དབང་ཞུས། དགུང་ལོ་ལྔ་ནས་བཟུང་བླ་མ་བསོད་ནམས་བསྟན་འཛིན་སོགས་དགེ་རྒན་དུ་བསྟེན་ཏེ་བོད་ཡིག་འབྲི་ཀློག་ནས་དཔལ་ཡུལ་ཐུན་མིན་གར་ཐིག་དབྱངས་སོགས་ལ་སྦྱང་བརྩོན་གནང་། ཁྱད་པར་དུ་༸སྐྱབས་རྗེ་རིན་པོ་ཆེ་མཆོག་ཐུན་མིན་རིགས་བདག་ཏུ་བཀུར་ཏེ་གནམ་ཆོས་སྔོན་རྩ་རྫོགས་གསུམ་དང་སྔ་འགྱུར་བཀའ་གཏེར་གྱི་དབང་ལུང་ཁྲིད་དང་བཅས་པ་གསན་བཞེས་མཛད། མགོན་པོ་གང་གི་བཀའ་ལུང་ལྟར་སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་དུ་ཞུགས་ནས་འཕགས་བོད་ཀྱི་གཞུང་ལུགས་ལ་ཐོས་བསམ་གནང༌བ་མ་ཟད་ད་དུང་རིག་མཛོད་རྩོམ་སྒྲིག་ཁང་དུ་དཔལ་ཡུལ་དུས་བབ་སོགས་ཀྱི་འགྲོ་གྲོན་གང་མང་བསྩལ་བ་དང་།
+
+                ཕྱི་རྒྱལ་ཁག་ཏུ་ཕེབས་ནས་ཆོས་ཚོགས་རྣམས་སུ་འགྲོ་བློ་དང་འཚམས་པའི་ཆོས་ཀྱི་མཛད་པ་རྒྱ་ཆེར་བསྐྱངས་དང་སྐྱོང་བཞིན་པ་མ་ཟད། ད་ཆ་༸སྐྱབས་རྗེ་མཆོག་ཞིང་དུ་གཤེགས་རྗེས་དགོན་འདིའི་དབུ་འཛིན་གྱི་འགན་ཁུར་བཞེས་ཏེ་རྒྱལ་བསྟན་འཛིན་སྐྱོང་སྤེལ་གསུམ་གནང་མུས་བཅས་སོ།།
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="peMasherap"class="photo-text1">
+            <p class="heading">མཁན་ཆེན་པདྨ་ཤེས་རབ།</p>
+            <p>           
+                                
+              <img class="kenchen-pema" src="images/sherab_856.jpg">
+              ཕྱི་ལོ་ ༡༩༣༦ ལོར་ཁམས་སྡེ་དགེ་རུ་སྐུ་འཁྲུངས། ཞེ་ཆེན་ཀོང་སྤྲུལ་རིན་པོ་ཆེའི་མདུན་ནས་དགེ་ཚུལ་དང་། ༸སྐྱབས་རྗེ་འཁྲུལ་ཞིག་རིན་པོ་ཆེའི་མདུན་ནས་དགེ་སློང་གི་སྡོམ་པ་བཞེས། ༸སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་སོགས་ལས་རྩ་རྒྱུད་གསང་བ་སྙིང་པོས་གཙོས་མདོ་སྔགས་ཡོངས་རྫོགས་དང་། རིན་ཆེན་གཏེར་མཛོད་ཆེན་མོའི་དབང་ལུང་སོགས་གསན།<br>
+              ཕྱི་ལོ་ ༡༩༦༨ ལོར་དགོན་འདིར་ཞབས་སོར་འཁོད་ནས་མཐོ་སློབ་ཆེན་མོ་འདིར་སྐུ་ངལ་འཛེམས་མེད་ཐོག་སློབ་གཉེར་བ་ཡོངས་ལ་ཐུན་མོང་བརྡ་སྤྲོད་རིག་པ། ཐུན་མིན་གཞུང་ཆེན་བཅུ་གསུམ་སོགས་སྔ་འགྱུར་རིང་ལུགས་དྲི་མ་མེད་པའི་མདོ་སྔགས་རྒྱ་མཚོའི་བཀའ་ཁྲིད་དང༌། དེ་དག་གི་དགོངས་འགྲེལ་སོགས་ལྗགས་རྩོམ་གནང༌། ད་བར་དགེ་ཚུལ་སློང་བརྒྱ་ཕྲག་མང་པོ་བསྒྲུབས་པ་སོགས་དམ་ཆོས་འདུལ་བའི་བསྟན་པ་རིན་པོ་ཆེ་འདི་ཉིད་མི་ཉམས་གོང་སྤེལ་གྱིས་འདུལ་འཛིན་དམ་པར་གྱུར། མདོར་ན་མཐོ་སློབ་ཆེན་མོའི་འཛིན་སྐྱོང་དང་། རིག་མཛོད་རྩོམ་སྒྲིག་ལྷན་ཁང་གི་ཚོགས་གཙོ་ལོ་གསུམ་ཙམ་གནང་ཞིང་། སྔ་ཕྱི་བར་གསུམ་དུ་རྩོམ་སྒྲིག་ཁང་འདི་ཉིད་ལ་མཐུན་རྐྱེན་གྱི་རྒྱབ་སྐྱོར་གང་མང་གནང་ཡོད། ད་ཆ་རྣམ་གླིང་ཆེས་མཐོའི་རྒྱུན་ལས་ཚོགས་གཞོན་གྱི་འགན་བཞེས་མུས་ཐོག་མཐོ་སློབ་ཆེན་མོ་འདིའི་འཛིན་སྐྱོང་ཐད་བཀའ་སློབ་ལམ་སྟོན་སོགས་གནང་ནས་ཐུགས་བརྩེས་མི་འདོར་བར་བཞུགས་བཞིན་པ་བཅས་སོ།།
+              
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="naMdrol"class="photo-text1">
+          <p class="heading">མཁན་ཆེན་རྣམ་གྲོལ་ཚེ་རིང་རིན་པོ་ཆེ</p>
+          <p>           
+                              
+            <img class="kenchen-namdrol" src="images/namdro_712.jpg">
+          
+                  ཕྱི་ལོ་ ༡༩༥༣ ལོར་ཁམས་སྡེ་དགེ་རུ་སྐུ་འཁྲུངས། ཕྱི་ལོ་ ༡༩༥༩ ལོར་བཙན་བྱོལ་དུ་ཕེབས། སྨྱོ་ཤུལ་མཁན་རིན་པོ་ཆེ་དང་མཁན་ཆེན་བརྩོན་འགྲུས། མཁན་པོ་དཔལ་ལྡན་ཤེས་རབ་སོགས་ཀྱི་སྐུ་མདུན་ནས་མདོ་སྔགས་ཕལ་ཆེར་གསན་བཞེས་མཛད། ཕྱི་ལོ་ ༡༩༧༧ ལོར་དགོན་འདིར་ཕེབས་ནས་བཤད་གྲྭའི་སྒྲིག་གཞིའི་གཟིགས་རྟོག་དང་དཔེ་ཁྲིད་སོགས་ཀྱི་འཛིན་སྐྱོང་གནང༌། <br>ཕྱི་ལོ་ ༡༩༨༣ ལོར་༸སྐྱབས་རྗེ་མཆོག་གིས་མཁན་པོའི་མཚན་གནས་བསྩལ། ཕྱི་ལོ་ ༡༩༨༨ ལོར་༸མཁན་ཆེན་འཇིགས་མེད་ཕུན་ཚོགས་མཆོག་གི་སྐུ་མདུན་དུ་བཅར་ཏེ་མདོ་སྔགས་སྤྱི་དང༌། ཁྱད་པར་དུ་སྤྱི་དོན་འོད་གསལ་སྙིང་པོ་སོགས་ཐུན་མིན་རང་ལུགས་སྔ་འགྱུར་བའི་ལྟ་གྲུབ་ལ་ཞིབ་གཟིགས་གནང་། དེ་རྗེས་མཐོ་སློབ་འདིར་རྒྱ་བོད་ཀྱི་གཞུང་ཆེན་ཁག་བཤད་ཁྲིད་གནང་བ་དང༌།རིག་མཛོད་རྩོམ་སྒྲིག་ལྷན་ཁང་ཐོག་མར་དབུ་བཙུགས་པ་ནས་ལོ་གཉིས་ཀྱི་རིང་ཚོགས་གཙོ་མཛད། ཕྱི་ལོ་ ༡༩༩༨ ལོར་བལ་ཡུལ་ཡང་ལེ་ཤོད་དུ་སྒྲུབ་ཁང་བསམ་གཏན་འོད་གསལ་གླིང་གསར་འཛུགས་ཀྱིས་དབང་ལུང་ཁྲིད་རྒྱུན་སོགས་གནང་དང་གནང་བཞིན་པ་དང་། ད་ཆ་རྣམ་གླིང་ཆེས་མཐོའི་རྒྱུན་ལས་ཚོགས་གཞོན་གྱི་འགན་བཞེས་མུས་ཐོག་མཐོ་སློབ་ཆེན་མོ་འདིའི་འཛིན་སྐྱོང་ཐད་བཀའ་སློབ་ལམ་སྟོན་སོགས་གནང་ནས་ཐུགས་བརྩེས་མི་འདོར་བར་བཞུགས་བཞིན་པ་བཅས་སོ།།
+                              
+          </p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+      </div>
+
+
+      <div id="tsEwang"class="photo-text1">
+          <p class="heading">མཁན་ཆེན་ཚེ་དབང་རྒྱ་མཚོ།</p>
+          <p>           
+                              
+            <img class="kenchen-tsewang" src="images/tsewang_861.jpg">
+          
+            
+            ཕྱི་ལོ་ ༡༩༥༤ ལོར་ལྷོ་བྲག་མཁར་ཆུར་སྐུ་འཁྲུངས། དགུང་གྲངས་བདུན་པར་བཙན་བྱོལ་དུ་ཕེབས། ཕྱི་ལོ་ ༡༩༦༢ ལོར་རྡོ་རྗེ་གླིང་དུ་བོད་གཞུང་སློབ་གྲྭར་ཞུགས། དགུང་ལོ་བཅུ་གཅིག་ཐོག་ར་སྟོད་སྟོང་ར་སྤྲུལ་སྐུའི་མདུན་ནས་དགེ་ཚུལ་གྱི་སྡོམ་པ་ཞུས་ཤིང་ཆོས་སྒོར་ཞུགས། ༡༩༦༩ ལོར་ཝཱར་ཎ་བོད་ཀྱི་ཆེས་མཐོའི་གཙུག་ལག་སློབ་གཉེར་ཁང་དུ་ཞུགས་ཏེ་ལོ་དགུའི་རིང་སཾ་སྐྲྀ་ཏ་སོགས་མདོ་སྔགས་རིག་གནས་དང་བཅས་པར་ཐོས་བསམ་གནང༌། ༸སྐྱབས་རྗེ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་སོགས་ཀྱི་མདུན་ནས་སྙིང་ཐིག་ཡ་བཞི་དང༌། རིན་ཆེན་གཏེར་མཛོད། གནམ་ཆོས་སྔོན་རྩ་རྫོགས་གསུམ་སོགས་དང༌། སྔ་འགྱུར་རང་ལུགས་ཀྱི་ཐུན་མིན་ལྟ་གྲུབ་སྐོར་གསན་བསམ་མཐར་ཕྱིན་པ་མཛད། ཕྱི་ལོ་ ༡༩༧༩ ལོར་དགོན་འདིར་ཞབས་སོར་འཁོད། ༡༩༨༢ ལོར་༸སྐྱབས་རྗེ་མཆོག་གི་མདུན་ནས་དགེ་སློང་གི་སྡོམ་པ་བཞེས་ནས། ༡༩༨༣ ལོར་མཁན་པོར་མངའ་གསོལ་མཛད། དེ་ནས་སྐུ་ངལ་འཛེམས་མེད་ཐོག་མཐོ་སློབ་འདིར་ཐུན་མོང་དང༌། ཐུན་མིན་གྱི་རིག་གནས་ཡོངས་རྫོགས་ཀྱི་བཀའ་ཁྲིད་དང་། རིག་མཛོད་རྩོམ་སྒྲིག་ལྷན་ཁང་དུ་ལོ་གསུམ་ཙམ་གྱི་རིང་ཕྱག་ལས་གནང་། ད་ལྟ་འདོན་བཞིན་པའི་ Palyul Times 
+            
+            ཞེས་པའི་དུས་དེབ་ཡང་ཐོག་མར་ཁོང་གིས་དགོངས་འཆར་གཙོ་བོར་གནང་བ་ལ་བརྟེན་ནས་འདོན་སྤེལ་བྱེད་འགོ་བཙུགས། དེ་རྗེས་ཕྱི་རྒྱལ་ཡུལ་གྲུ་ཁག་ཏུ་ཞབས་སོར་བཀོད་དེ་ནང་ཆོས་སློབ་སྟོན་གྱི་མཛད་ཕྲིན་བསྐྱངས། ད་ཆ་རྣམ་གླིང་ཆེས་མཐོའི་རྒྱུན་ལས་ཚོགས་གཞོན་གྱི་འགན་བཞེས་མུས་ཐོག་མཐོ་སློབ་འདིའི་འཛིན་སྐྱོང་ཐད་བཀའ་སློབ་ལམ་སྟོན་ཐུགས་བརྩེས་མི་འདོར་བར་བཞུགས་བཞིན་པ་བཅས་སོ།།
+            གོང་གི་རྣམ་ཐར་ཁག་སྔ་འགྱུར་རིག་མཛོད་རྩོམ་སྒྲིག་ལྷན་ཁང་གི་བགྲང་བྱ་ཉེར་ལྔ་འཁོར་བའི་དྲན་དེབ་ལས་ཟུར་བཀོལ་བྱས།
+          </p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          
+
+      </div>
+
+
+        
+        
+        <div>
+            <div class="back-to-menu-end"><img class="end-red-line"src="images/line_470x10_trans.png"><a href="#mainmenu"><p class="end-talk">ཕྱིར་ལོག</p><img src="images/idea_ending_fluorish320.gif"></a></div>
+        </div>
+
+    </div>
+    
+
+
+    
+      
+    
+    <script>
+      const hameburger = document.querySelector(".hameburger");
+      const navBar = document.querySelector(".navbar");
+
+      hameburger.addEventListener("click", () => {
+        hameburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+      })
+
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hameburger.classList.remove("active");
+        navBar.classList.remove("active");
+      }))
+    </script>
+      
+  </body>

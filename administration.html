@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+    <style>  
+    body{
+     margin:0 auto;
+     min-width:352px;
+     
+    }
+    *{
+      margin:0;
+      padding:0;
+    }
+    .banner-img-container{
+      display:flex;
+    }
+    .top-banner{
+      margin:0 auto;
+      width:90%;
+      margin-bottom:20px;
+    }
+    .backdrop-container{
+      display:none;
+    }
+    .menubar{
+      display:flex;
+      flex-wrap:wrap;
+      list-style:none;
+      align-items:space-between;
+      display:none;
+      font-size:30px;
+      font-weight:bold;
+    }
+    
+    li{
+      list-style:none;
+    }
+    a{
+      text-decoration:none;
+      font-size:25px;
+    }
+    .hameburger{
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      background-color:rgb(77, 10, 10);
+      padding:10px;
+      border-radius:4px;
+    }
+    
+    .hameburger.active .bar:nth-child(2){
+      opacity:0;  
+    }
+    .hameburger.active .bar:nth-child(1){
+      transform: translateY(10px) rotate(45deg);
+    }
+    .hameburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .navbar{
+      position:fixed;
+      left:-100%;
+      top:50px; 
+    }
+    .nav-menu{
+      background-color:rgb(121, 37, 37);
+      height:100vh;
+      width:400px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:45px;
+      top:30px;  
+    }
+
+    .navbar.active{
+      left:0;
+
+    }
+    nav ul li a{
+      font-size:40px;
+      color:white;
+      margin-top:40px;
+    }
+    nav ul li a:hover{
+      color:yellow;
+    }
+    .bar{
+      display:block;
+      width:30px;
+      height:4px;
+      margin:5px auto;
+        -webkit-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+        background-color:rgb(255, 255, 255);
+    }
+
+
+    .main-body{
+        width:80%;
+        margin:0 auto;
+
+    }
+    .main-menu ul li a{
+          color:brown;
+          
+        }
+   .main-menu ul li a:hover{
+          color:rgb(219, 221, 112);
+          
+        }
+    .photo-text1{
+        width:100%;
+        margin-top:30px;
+    }
+    p{
+        font-size:25px;
+        text-align: justify;
+    }
+
+    .heading{
+        display:flex;
+        justify-content:center;
+        margin-bottom:30px;
+        color:green;
+    }
+    .red-line{
+        margin:0 auto;
+        width:100%;
+        margin-top:20px;
+    }
+    .red-bar-image{
+        width:100%;
+        margin:0 auto;
+    }
+    .back-to-menu{
+        display:flex;
+        justify-content:center;
+    }
+
+
+    .back-to-menu-end{
+        display:flex;
+        flex-direction:column;
+        gap:50px;
+        margin:0 auto;
+        align-items:center;
+        justify-content:center;
+        
+    }
+    .end-red-line{
+        margin-top:50px;
+    }
+    .end-talk{
+        text-align:center;
+    }
+
+    .sub-menu ul {
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding-top:-4px;
+    }
+   
+    .sub-menu ul li a{
+        color:brown;
+        font-weight:bold;
+        font-size:25px;
+    }
+    .sub-menu ul li a:hover{
+        color:rgb(14, 80, 14);
+    }
+
+
+    /*css written for this pags*/
+    .admin-2023{
+        width:100%;
+        max-width:500px;
+    }
+    .discipliners{
+      width:100%;
+      max-width:800px;
+    }
+    .photo-text2{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    .literary{
+      width:100%;
+      max-width:500px;
+    }
+    .researchers{
+      max-width:500px;
+      width:100%;
+    }
+    .dictionary-first{
+      max-width:500px;
+      width:100%;
+    }
+    .dictionary-second{
+      width:100%;
+      max-width:500px;
+    }
+    .translators{
+      width:100%;
+      max-width:500px;
+    }
+    .computer-section{
+      max-width:500px;
+      width:100%;
+    }
+    .wind-horse{
+      max-width:600px;
+      width:100%;
+    }
+    .cafe-staff{
+      max-width:600px;
+    }
+    .cafe-div, p{
+      flex:1;
+     
+    }
+    .cafe-div{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+
+    }
+    .shop-keepers{
+      max-width:600px;
+      width:100%;
+    }
+    .heading2{
+      color:green;
+      font-weight:bold;
+    }
+
+  
+
+    @media only screen and ( min-width:726px){
+        .admin-2023{
+            float:left;
+            margin:20px;
+ 
+        }
+        .literary{
+          float:right;
+          margin:10px;
+        }
+        .researchers{
+          float:left;
+          margin:20px;
+          height:300px;
+        }
+        .dictionary-first{
+          float:right;
+          margin:20px;
+
+        }
+        .dictionary-second{
+          float:left;
+          margin:20px;
+        }
+        .computer-section{
+          float:right;
+          margin:20px;
+        }
+        .cafe-staff{
+        width:60%;
+        }
+        .cafe-div, p{
+          flex:1;
+          margin-top:60px;
+        }
+        .cafe-div{
+          display:flex;
+          flex-direction:row;
+          gap:10px;
+          margin-top:20px;
+
+        }
+
+        .shop-keepers{
+          float:left;
+          margin-right:10px;
+          margin-top:10px;
+
+        }
+        
+
+    }
+    
+
+   
+        
+        @media only screen and ( min-width:768px){
+          .menubar{
+            display:block;
+            display:flex;
+            flex-wrap:wrap;
+            list-style:none;
+            align-items:space-between;
+            column-gap:20px;
+            
+          }
+          .nav-menu{
+            display:none;
+
+          }
+          .hameburger{
+            display:none;
+          }
+          .content{
+            height:400px;
+            width:500px;
+            margin-top:50px;
+            margin-bottom:50px;
+
+          }
+         
+          .main-menu{
+            max-width:1000px;
+            margin:0 auto;
+          }
+          .red-bar-image{
+            display:block;
+            max-width:790px;
+            margin:0 auto;
+          }
+          .menubar li{
+            margin:0 auto;
+            padding:1%;
+            color:brown;
+
+          }
+          .menubar li:hover{
+            color:yellow;
+            cursor:pointer;
+          }
+          .menubar li:active{
+            color:brown;
+            cursor:progress;
+          }
+          .sub-flex{
+            margin:0 auto;
+            display:flex;
+            flex-direction:row;
+            column-gap: 20px;
+          }
+          .backdrop-container{
+            display:block;
+            margin:0 auto;
+            max-width:1000px;
+          }
+          .top-banner{
+            display:none;
+          }
+          
+          
+
+        }
+
+        @media only screen and (min-width:1280px){
+          body{
+            max-width:1280px;
+          }
+          .main-menu{
+            font-size:30px;
+            font-weight:bold;
+          }
+          
+          .red-bar-image{
+            margin-top:5px;
+          }
+          
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="header"></div>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" >མདུན་ངོས།</a></li> 
+        <li class="nav-item"><a href="History.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+        <li class="nav-item"><a href="H.H. Penor Rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+        <li class="nav-item"><a href="Administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+        <li class="nav-item"><a href="Higher admin.html">ཆེས་མཐོའི་རྒྱུནལས།</a></li>
+        <li class="nav-item"><a href="Curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+        <li class="nav-item"><a href="Teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+        <li class="nav-item"><a href="Teachers.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+        <li class="nav-item"><a href="Teachers.html">སློབ་དཔོན་རྣམས།</a></li>
+        <li class="nav-item"><a href="Important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+        <li class="nav-item"><a href="gallary.html">བརྙན་པར།</a></li>
+        <li class="nav-item"><a href="Contact.html">འབྲེལ་གཏུགས།</a></li>
+        <li class="nav-item"><a href="library.html">ཆོས་མཛོད།</a></li>
+      </ul>
+    </nav>
+      <div class="hameburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div id="mainmenu" class="banner-img-container">
+      
+        <img  class="top-banner"src="images/backdrop_480_9.png">
+    </div>
+    <div class="backdrop-container">
+      <img class="backdrop-image"src="images/backdrop_default13.png">
+    </div>
+    <div class="main-menu">
+      <ul class="menubar">
+        <li><a href="index.html">མདུན་ངོས།</a></li> 
+        <li><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+        <li><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+        <li><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+        <li><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུན་ལས།</a></li>
+        <li><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+        <li><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+        <li><a href="nni_graduate.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+        <li><a href="nni_graduate.html">སློབ་དཔོན་རྣམས།</a></li>
+        <li><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+        <li><a href="gallary.html">བརྙན་པར།</a></li>
+        <li><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+        <li><a href="library.html">ཆོས་མཛོད།</a></li>
+      </ul>
+    </div>
+    
+    <div class="main-body">
+      <div class="sticky">
+        <img class="red-bar-image"src="images/line_470x10_trans.png">
+        <div class="sub-menu">
+            <ul>
+                <li><a href="#aDministration">༈ འཛིན་སྐྱོང་།</a></li>
+                <li><a href="#diScipliners">དགེ་བསྐོས།</a></li>
+                <li><a href="#liTeraries">རྩོམ་སྒྲིག་སྡེ་མཚན།</a></li>
+                <li><a href="#reSearchers">ཞིབ་འཇུག་ཁང་།</a></li>
+                <li><a href="#diCtionaries">ཚིག་མཛོད་ཁང་།</a></li>
+                <li><a href="#trAnslators">སྒྲ་བསྒྱུར།</a></li>
+                <li><a href="#coMputer">རྩིས་འཕྲུལ།</a></li>
+                <li><a href="#caFe">ཞི་འཚོ་ཇ་ཁང་།</a></li>
+            </ul>
+        </div>
+
+      </div>
+        
+        <img class="red-line"src="images/line_470x10_trans.png">
+        <div id="aDministration"class="photo-text1">
+                  <p class="heading">༄༅། །འཛིན་སྐྱོང་།</p>
+            <p>
+                རྒྱུན་ལས་ལྷན་ཚོགས།
+                ༸སྐྱབས་རྗེ་རིན་པོ་ཆེའི་འཆར་སྣང་འོག་བཤད་གྲྭའི་རྒྱུན་ལས་ནང་ཚོགས་གཙོ་དང་། ཚོགས་གཞོན། དྲུང་ཆེ། དངུལ་གཉེར། ཆོས་ཁྲིམས་པ་བཅས་གཙོ་བོ་འགན་ཡོད་ཀྱི་ཚོགས་མི་ལྔས་མཐོ་སློབ་འདིར་གཟིགས་རྟོག་གནང་བཞིན་ཡོད་པ་སྟེ། ཚོགས་གཙོས་བཤད་གྲྭའི་སྒྲིག་གཞི། སློབ་ཕྲུག་གི་ཤེས་ཡོན་དང་ཀུན་སྤྱོད་སོགས་ཡར་རྒྱས་གཏོང་ཕྱོགས་སྐོར་དང་གསོ་སྦྱོང་དང་དབྱར་གནས་ཀྱི་མཁན་པོ་གནང།                     <span ><img class="admin-2023" src="images/admin_july23_w.jpg"></span>ཚོགས་གཞོན་གྱིས་ཚོགས་གཙོའི་ཕྱག་རོགས་དང་རྒྱུགས་སྤྲོད་དོ་དམ་གྱི་འགན་འཛིན་དང་་ཚོགས་གཙོ་མེད་སྐབས་རྒྱུན་ལས་ཀྱི་འགན་བཞེས་གནང་བཞིན་ཡོད། དྲུང་ཆེས་ཚོགས་འདུའི་སྐབས་ལས་རིམ་གྱི་བཀོད་སྒྲིག མང་ཚོགས་ལ་གསལ་བསྒྲགས། གཞན་ཡང་ཕྱི་ཕྱོགས་ལ་མཐུན་འབྲེལ་བཅས་དང་།
+
+                
+                དངུལ་གཉེར་གྱིས་དགེ་འདུན་པའི་སྤྱི་རྫས་བདག་གཉེར་དང་། གསོལ་ཚིགས། ཆུ་དང་གློག་སོགས་ཀྱི་མཐུན་རྐྱེན་ཐད་འགན་བཞེས། ཆོས་ཁྲིམས་པས་གཙོ་བོ་སྒྲིག་གཞི་དང་འབྲེལ་ཚོགས་པ་ཚོགས་ཕྱོགས་ཀྱི་སྐོར་དང་དམིགས་གསལ་རྒྱུན་ལས་ལ་སྙན་སེང་འབུལ་དགོས་པའི་གནས་ཚུལ་ཆེ་ཁག་རིགས་མ་གཏོགས་གཞན་རྣམས་ཐད་ཀར་ཐག་གཅོད་གནང་བཞིན་ཡོད། རྒྱུན་དུ་༸སྐྱབས་རྗེ་རིན་པོ་ཆེ་མཆོག་གི་དགོངས་བཞེད་བཞིན་བྱམས་བརྩེའི་སྒོ་ནས་ལེགས་ཉེས་ཀྱི་བླང་དོར་ལམ་སྟོན་བྱེད་པ་ལས། བཙན་པོའི་དབང་ཤུགས་ཀྱིས་བརྡུང་བརྡེག་དང་ངན་སྨྲས་སོགས་བྱེད་པའི་ལུགས་སྲོལ་མེད།
+                
+               
+                
+               
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+    
+        </div>
+
+        <div id="diScipliners"class="photo-text2">
+          <p class="heading">   ༄༅། །སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོའི་དགེ་སྐོས་ལས་ཁུངས། </p>
+          <img class="discipliners" src="images/disciplilners_w.jpg">
+          <p>
+              
+                           
+              དགེ་སྐོས་ལས་ཁུངས་ནི་དགེ་སྐོས་ཆེན་མོ་གཙོས་པའི་དགེ་སྐོས་ལས་རོགས་བརྒྱད་ཀྱིས་གཙོ་བོ་སྒྲིག་གཞི་སྒྲིག་ལམ་དང་འབྲེལ་བའི་ལས་དོན་དང་། ཚོགས་པ་འཚོག་ཕྱོགས་སྐོར། རང་སྦྱོང་དང་རྩོད་པའི་སྐབས་དམིགས་བསལ་གྱི་གཟིགས་རྟོག་དང་། དགོངས་འཁྲོལ་དང་ཉེས་ཆད་རིགས་རྣམས་འོས་བབས་དང་བསྟུན་ཏེ་ཐག་གཅོད་གནང་སའི་ལས་ཁུངས་ཤིག་ཡིན།
+
+          </p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="liTeraries"class="photo-text1">
+          <p class="heading">༄༅། །སྔ་འགྱུར་རིག་མཛོད་རྩོམ་སྒྲིག་སྡེ་མཚན། </p>
+          <p>
+              <img class="literary" src="images/editor_committee_w.jpg">
+              རྒྱུན་ལས་ཀྱིས་བསྐོས་པའི་མཁན་སློབ་གང་རུང་ཞིག་ནས་གཙོ་འགན་བཞེས་ཐོག་རྩོམ་སྒྲིག་ཁང་གི་ལས་བྱེད་རྣམས་ཀྱིས་དུས་དེབ་དང་། དེ་བཞིན་དྲན་དེབ། སྔོན་གྱི་མཁས་གྲུབ་རྣམས་ཀྱི་རྣམ་ཐར་སོགས་རྩོམ་སྒྲིག་གནང་བཞིན་ཡོད། ༡༩༩༡ ལོར་རྩོམ་སྒྲིག་ཁང་དབུ་བརྙེས་ནས་ད་བར་དཔེ་དེབ་ཀྱི་རིགས་རྩོམ་སྒྲིག་བྱས་པའི་ཁོངས། སྔ་འགྱུར་འོད་གསལ། གུ་རུའི་རྣམ་ཐར་དད་པའི་ས་བོན། འདུལ་བའི་དགག་སྒྲུབ་ཀྱི་བསླབ་བྱ་བླང་དོར་མིག་འབྱེད། ༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་གསོལ་འདེབས་ཕྱོགས་སྒྲིགས། སྔ་འགྱུར་མཐོ་སློབ་ཀྱི་ལོ་རྒྱུས་དབྱིན་སྐད་ཐོག
+              སྙན་རྩོམ་ཕྱོགས་སྒྲིགས། གཙུག་ལག་ཁང་གསར་པའི་མཛད་སྒོའི་དྲན་དེབ། སྙན་རྩོམ་སྐལ་བཟང་རྣ་བའི་བདུད་རྩི། གཏེར་མཛོད་ལོ་རྒྱུས་ཅེས་བཏུས། བཤེས་གཉེན་བསྟེན་ཚུལ་བོད་དབྱིན་གཉིས་ཀའི་ཐོག སྔ་འགྱུར་སྨོན་ལམ་ཆེན་མོའི་དྲན་དེབ་ཐེངས་མང་་དང། ལྷག་པར་ ༢༠༠༢ ཟླ་ ༡༠ ཚེས་ ༢༥ ཉིན་པདྨའི་རང་མདངས་ཞེས་པའི་དུས་དེབ་ཐེངས་དང་པོ་དེ་གསར་འདོན་དང། མཐོ་སློབ་འདི་ནི་དབུ་བརྙེས་ནས་བགྲང་བྱ་ཉེར་ལྔ་འཁོར་བའི་དྲན་དེབ་ལྷ་ཡི་མེ་ཏོག་དང་བསོད་ནམས་བྱེ་བའི་སྒྱུ་འཕྲུལ་རོལ་མོ་སོགས་དེབ་ཕྲེང་མང་པོ་སྐྲུན་བྱས་ཡོད།
+          </p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="reSearchers"class="photo-text1">
+            <p class="heading">སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་བསྟི་གནས་ཁང།</p>
+            <p> <img class="researchers"src="images/researchers_w.jpg"> 
+              ཞིབ་འཇུག་ཁང་འདི་ནི་སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོའི་ཡན་ལག་གི་སྡེ་ཚན་ཞིག་ཡིན། 
+              འདི་ནས་ཞིབ་འཇུག་པ་སྡེ་ཚན་དང་པོའི་ཁོངས་སུ་མཁན་པོ་གསུམ་དང་བཙུན་མ་སློབ་དཔོན་གཅིག་བཅས་བཞིས་དེང་དུས་ནུབ་ཕྱོགས་ཀྱི་ཞིབ་འཇུག་བྱེད་ཚུལ་དང་མཐུན་པར་ཉམས་ཞིབ་གནང་ནས་སྤྱི་ལོ་ ༢༠༡༧ ལོར་མཐར་ཕྱིན་ཡོད། ཞིབ་འཇུག་པ་སྡེ་ཚན་གཉིས་པའི་ནང་ད་ལྟ་ཞིབ་འཇུག་སློབ་མ་མཁན་པོ་གཉིས་དང་སློབ་དཔོན་གཉིས་བཅས་བཞིའི་མདོ་སྔགས་ཀྱི་གཞུང་ལུགས་དག་ལ་ཉམས་ཞིབ་བྱེད་བཞིན་ཡོད། སྡེ་ཚན་འདི་ནི་མཐོ་སློབ་ཆེན་མོའི་སྲོལ་རྒྱུན་གྱི་རིག་གནས་ཆེ་བ་ལྔ་དང་ཆུང་བ་ལྔ་ལ་རིགས་གཅིག་རྐང་འཛིན་བྱེད་སའི་བསྟི་གནས་གསར་པ་ཞིག་རེད།
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+        <div id="diCtionaries"class="photo-text1">
+            <p class="heading">༄༅། ། རྒྱལ་ཡོངས་རྙིང་མའི་ཚིག་མཛོད་རྩོམ་སྒྲིག་ཁང་གི་བྱུང་རིམ་སྙིང་བསྡུས།་།</p>
+            <p>                          
+                དྷ་ས་སྨོན་ལམ་བོད་ཀྱི་བརྡ་འཕྲིན་ཞིབ་འཇུག་ཁང་ནས་འདོན་འཆར་བྱུང་བའི་ཚིག་མཛོད་རྒྱས་པའི་ནང་། ཆོས་བརྒྱུད་ཁག་གི་འབྲེལ་ཡོད་གཞུང་ལུགས་ལྟ་གྲུབ་དང་། ཆོས་འབྱུང་ལོ་རྒྱུས། ཕྱག་བཞེས་འཕྲིན་སྒྲུབ་སོགས་ཐུན་མིན་བརྡ་ཆད་དང་བཅས་པ་ཡོངས་རྫོགས་སྐབས་འབྲེལ་ཆོས་བརྒྱུད་སོ་སོ་ནས་འགན་བཞེས་དགོས་རྒྱུའི་ཐད་ཕྱོགས་སོ་སོའི་དབུ་འཛིན་རྣམས་ལ་རེ་སྐུལ་སྙན་འབུལ་འབྱོར་བ་བཞིན། རྙིང་མའི་དབུ་འཛིན་ཁྲི་རབས་དྲུག་པ་༸སྐྱབས་རྗེ་སྟག་ལུང་རྩེ་སྤྲུལ་རིན་པོ་ཆེ་མཆོག་གི་བཀའ་ལྟར་ཕྱི་ལོ་ ༢༠༡༣  ལོར་རྡོར་གདན་རྙིང་མའི་སྨོན་ལམ་ཆེན་མོའི་འགན་འཛིན་ལྷན་ཚོགས་ཀྱི་གོ་སྒྲིག་འོག་བླ་ཆེན་མཁན་སྤྲུལ་བླ་སློབ་ལས་སྣེ་ཚང་འཛོམས་ཐོག་བཀའ་མོལ་གྲོས་ཆོད་བྱུང་དོན་ལྟར།
+                <img class="dictionary-first "src="images/dictionary_comm2022.jpg">       
+                འདི་འབྲེལ་ལས་གཞིར་ཆེད་གཉེར་གྱི་རྩོམ་སྒྲིག་ཁང་ཟུར་འཛུགས་ཆེད་རྙིང་མའི་སྨོན་ལམ་གཞུང་ནས་མཐུན་རྐྱེན་རོགས་འདེགས་དང་། རྣམ་གྲོལ་གླིང་དགོན་ནས་ཕྱག་ལས་ཀྱི་འགན་བླངས་ཐོག ལམ་སྟོན་པའི་ཐུགས་འགན་མཁན་ཆེན་པདྨ་ཤེས་རབ་མཆོག་ནས་བཞེས་རྒྱུ་དང་། ཕྱོགས་སོ་སོའི་དགོན་སྡེ་རྣམས་ནས་ཀྱང་སྐབས་བབ་ཀྱི་ཕྱག་རོགས་གནང་རྒྱུའི་གཏན་ཁེལ་བྱུང་བ་བཞིན། ཕྱི་ལོ་ ༢༠༡༣ ཟླ་བ་ ༠༤ ཚེས་ ༠༧ ཉིན་འདི་ག་རྣམ་གྲོལ་གླིང་དུ་སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་གི་འཛིན་སྐྱོང་འོག་ཚིག་མཛོད་རྩོམ་སྒྲིག་པ་བསྐོ་བཞག་གིས་ཚིག་མཛོད་ལས་ཁུངས་སྒོ་འབྱེད་དང་། ཕྱི་ཟླ་ ༠༤ ཚེས་ ༡༠ ནས་དངོས་སུ་ལས་འགོ་ཚུགས་པ་ནས་བཟུང་། གཙོ་བོ་སྔ་འགྱུར་ཐུན་མོང་བའི་ལས་གཞི་རྣམས་ཆེད་ལས་ཐོག ཐུན་མིན་དགོན་སྡེ་སོ་སོ་དང་སྒེར་ནས་བརྒྱུད་བསྐུར་བྱུང་བ་རྣམས་ཀྱང་དག་བཅོས་སྒྲིག་སྦྱོར་ཞུས་ཏེ་ལོ་དགུའི་ལས་འཆར་གྱི་གཏན་འབེབས་ལྟར་ད་བར་ལོ་གསུམ་རེའི་མཚམས་གྱི་ཚིག་མཛོད་ཐོན་རིམ་དང་པོ་དང་གཉིས་པ་ཡན་གྱི་ལས་དོན་གྲུབ་འབྲས་ལེགས་སོན་བྱུང་ཟིན་པ་དང་། ད་ལྟའི་ཆར་འབྱུང་འགྱུར་ཐོན་རིམ་གསུམ་པའི་ཆེད་ལས་དོན་མུ་མཐུད་སྐྱོད་མུས་ཡིན།
+            </p>
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+        </div>
+
+
+        <div id="trAnslators"class="photo-text1">
+                      <p class="heading">༄༅། །དཔལ་ཡུལ་ཚིག་མཛོད་རྩོམ་སྒྲིག་ཁང་།</p>
+                      <p>  <img class="dictionary-second"src="images/dictionary_w.jpg"> 
+                        སྤྱི་ལོ་ ༢༠༡༦ ཟླ་ ༨ ཚེས་ ༢༠ བོད་ཟླ་དྲུག་པའི་ཚེས་བཅུ་བདུན་རེས་གཟའ་སྤེན་པ་གཟའ་སྐར་འཕྲོད་སྦྱོར་དགེ་བའི་ཆར།    སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོའི་རྒྱུན་ལས་ཀྱིས་གཙོས་པའི་རྒྱུན་ལས་ཁག་དང་། མཁན་སློབ་མཉམ་འཛོམས་ཐོག་རྒྱལ་བ་དཔལ་ཡུལ་བའི་ཚིག་མཛོད་རྩོམ་སྒྲིག་ཁང་གི་དབུ་འབྱེད་མཛད་སྒོ་ཚོགས། ལས་ཁུངས་འདི་འཛུགས་པའི་དམིགས་ཡུལ་གཙོ་བོ་ནི་རྒྱལ་བ་དཔལ་ཡུལ་བའི་ཕྱག་བཞེས་ཕྲིན་སྒྲུབ་དང་། གདན་རབས་ལོ་རྒྱུས། རྣམ་ཐར་ཞལ་གདམས། དགོན་ཆེན་དགོན་ཆུང་སོགས་ངོ་སྤྲོད་དང་འབྲེལ་བའི་ཚིག་མཛོད་རྩོམ་སྒྲིག་བྱ་རྒྱུ་དང་།
+                    
+                        ལྷག་པར་དུ་ཞལ་རྒྱུན་ཐོག་ཡོད་པའི་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་རྣམ་ཐར་ཞུ་སྒྲིག དཔལ་ཡུལ་བའི་མཁས་གྲུབ་རིམ་བྱོན་གྱི་གསུང་འབུམ་ཁག་དང་མཐོང་བ་བརྒྱུད་པའི་ཕྱག་བཞེས་དང་འབྲེལ་བའི་ཡིག་ཆ་རྣམས་ཉམས་གསོ་བྱ་རྒྱུ་ཡིན་པ་རེད།
+                        ད་ཆ་མཐོ་སློབ་ཆེན་མོའི་རྒྱུན་ལས་ཀྱིས་བཀོད་སྒྲིག་གནང་བའི་འགན་འཛིན་དང་ལས་རོགས་བཅས་ཀྱིས་མུ་མཐུད་དེ་བྱ་འགུལ་འདི་ལེགས་གྲུབ་ཡོང་བ་ལ་འབུང་བཞིན་པ་ལགས།</p>
+                      <img class="red-line"src="images/line_470x10_trans.png">
+                      <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+
+        </div>
+
+
+
+        <div id="diCtionary2"class="photo-text1">
+          <p class="heading">༄༅། །དཔལ་ཡུལ་ཚིག་མཛོད་རྩོམ་སྒྲིག་ཁང་།</p>
+          <p>  <img class="dictionary-second"src="images/dictionary_w.jpg"> 
+            སྤྱི་ལོ་ ༢༠༡༦ ཟླ་ ༨ ཚེས་ ༢༠ བོད་ཟླ་དྲུག་པའི་ཚེས་བཅུ་བདུན་རེས་གཟའ་སྤེན་པ་གཟའ་སྐར་འཕྲོད་སྦྱོར་དགེ་བའི་ཆར།    སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོའི་རྒྱུན་ལས་ཀྱིས་གཙོས་པའི་རྒྱུན་ལས་ཁག་དང་། མཁན་སློབ་མཉམ་འཛོམས་ཐོག་རྒྱལ་བ་དཔལ་ཡུལ་བའི་ཚིག་མཛོད་རྩོམ་སྒྲིག་ཁང་གི་དབུ་འབྱེད་མཛད་སྒོ་ཚོགས། ལས་ཁུངས་འདི་འཛུགས་པའི་དམིགས་ཡུལ་གཙོ་བོ་ནི་རྒྱལ་བ་དཔལ་ཡུལ་བའི་ཕྱག་བཞེས་ཕྲིན་སྒྲུབ་དང་། གདན་རབས་ལོ་རྒྱུས། རྣམ་ཐར་ཞལ་གདམས། དགོན་ཆེན་དགོན་ཆུང་སོགས་ངོ་སྤྲོད་དང་འབྲེལ་བའི་ཚིག་མཛོད་རྩོམ་སྒྲིག་བྱ་རྒྱུ་དང་།
+        
+            ལྷག་པར་དུ་ཞལ་རྒྱུན་ཐོག་ཡོད་པའི་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་རྣམ་ཐར་ཞུ་སྒྲིག དཔལ་ཡུལ་བའི་མཁས་གྲུབ་རིམ་བྱོན་གྱི་གསུང་འབུམ་ཁག་དང་མཐོང་བ་བརྒྱུད་པའི་ཕྱག་བཞེས་དང་འབྲེལ་བའི་ཡིག་ཆ་རྣམས་ཉམས་གསོ་བྱ་རྒྱུ་ཡིན་པ་རེད།
+            ད་ཆ་མཐོ་སློབ་ཆེན་མོའི་རྒྱུན་ལས་ཀྱིས་བཀོད་སྒྲིག་གནང་བའི་འགན་འཛིན་དང་ལས་རོགས་བཅས་ཀྱིས་མུ་མཐུད་དེ་བྱ་འགུལ་འདི་ལེགས་གྲུབ་ཡོང་བ་ལ་འབུང་བཞིན་པ་ལགས།</p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+
+        </div>
+        <div id="coMputer"class="photo-text1">
+          <p class="heading">༄༅། །སྔ་འགྱུར་རིག་མཛོད་རྩིས་འཕྲུལ་སྡེ་ཚན།།</p>
+ 
+          <p>  
+            <img class="computer-section"src="images/computer_july23_w.jpg">
+            འདི་ནང་ཕྱག་དཔེ་པར་བསྐྲུན་གྱི་ཆ་རྐྱེན་དེང་དུས་ཀྱི་འཕྲུལ་ཀླད་ཡོ་བྱད་ཆ་ཚང་ཡོད་ཅིང། རྒྱུན་ལས་ཀྱིས་བསྐོས་པའི་མཁན་སློབ་གང་རུང་ཞིག་ནས་གཙོ་འགན་བཞེས་ཐོག སྐབས་ཐོབ་ལས་བྱེད་རྣམས་ཀྱིས་རྒྱལ་བ་གོང་མ་རྣམས་ཀྱི་གསུང་རབ་ཁག་འཛུགས་བཞིན་པ་ལས། ད་ལྟའི་ཆར་དཔེ་རྒྱུན་དཀོན་རིགས་འགའ་ཞིག་དང་། ལོ་རིམ་དགུའི་སློབ་ཚན་རྣམས་འཕྲུལ་ཀླད་དུ་གཅུག་ནས་ཞུ་དག་གྲུབ་ཟིན་ཅིང་དེ་དག་ལས་འགའ་ཞིག་པར་དུ་བསྐྲུན་ཏེ་སྐབས་ཐོབ་འཛིན་གྲྭར་སོ་སོར་ཕན་ཐོགས་ཆེན་པོ་ཡོང་བཞིན་པ་དང། གཞན་ཡང་ལོ་ཐོ་སོགས་ཟུར་དུ་པར་བསྐྲུན་ཞུ་བཞིན་པའོ།།</p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+
+        </div>
+       
+        <div id="windhorse"class="photo-text2">
+          <p class="heading"> ༄༅། །ལྕགས་པར་དང་འདྲ་བཤུས་འཕྲུལ་པར་ཁང།</p>
+ 
+         
+            <img class="wind-horse"src="images/wind_horse_w.jpg">
+            <p>   
+           
+            རྒྱུན་ལས་ཀྱིས་བསྐོས་པའི་མཁན་སློབ་གང་རུང་ཞིག་ནས་གཙོ་འགན་བཞེས་ཐོག་དེ་སྔོན་ལྕགས་པར་ལས་བྱེད་པས་མཁས་འཇུག་འགྲེལ་པ་སོགས་དཔེ་དེབ་རིགས་འདྲ་མིན་པར་བསྐྲུན་ཞུས་ཤིང། དེང་སྐབས་གཙོ་བོ་རླུང་རྟའི་རིགས་པར་དུ་སྐྲུན་བཞིན་ཡོད། འདྲ་བཤུས་འཕྲུལ་པར་ཁང་ནང་འདྲ་བཤུས་རིགས་འོས་བབས་ཀྱི་རིན་གོང་བླངས་ཏེ་པར་འདེབས་བཞིན་ཡོད།</p>
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+
+        </div>
+
+
+        <div id="caFe"class="photo-text2">
+          <p class="heading2"> ༄༅། །ཚོང་ཁང་རིགས།</p>
+ 
+         <div class="cafe-div">
+                      <img class="cafe-staff"src="images/cafe_staff_w.jpg">
+                      <p>   
+                        
+                        དངུལ་གཉེར་གྱིས་གཟིགས་རྟོག་འོག་ཚོང་ཁང་ལས་བྱེད་རྣམས་ནས། རྫས་རིགས་སྣ་ཚོགས་ཀྱི་ཚོང་ཁང། ཞི་འཚོ་ཇ་ཁང། འོ་མ་དང་ཚལ་རིགས་ཚོང་ཁང། དཔེ་དེབ་བླུ་ཡོན་འབུལ་ཁང་བཅས་ཁེ་སྤོབས་ཁོ་ནའི་ཆེད་མིན་པར་སློབ་གཉེར་བ་རྣམས་ཀྱི་དཀའ་ངལ་བསལ་སླད་འཛིན་སྐྱོང་གནང་བཞིན་པ་ཡིན།
+                      </p>
+         </div>
+            
+          <img class="red-line"src="images/line_470x10_trans.png">
+          <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+
+
+          
+          <div id="shopkeepers"class="photo-text2">
+            <p class="heading2">༄༅། །ཚོང་ཁང་།</p>
+   
+           <div>
+                        
+                        <p>   
+                          
+                          
+                          དངུལ་གཉེར་གྱིས་གཟིགས་རྟོག་འོག་ཚོང་ཁང་ལས་བྱེད་རྣམས་ནས། རྫས་རིགས་སྣ་ཚོགས་ཀྱི་ཚོང་ཁང།  འོ་མ་དང་ཚལ་རིགས་ཚོང་ཁང། དཔེ་དེབ་བླུ་ཡོན་འབུལ་ཁང་བཅས་ཁེ་སྤོབས་ཁོ་ནའི་ཆེད་མིན་པར་སློབ་གཉེར་བ་རྣམས་ཀྱི་དཀའ་ངལ་བསལ་སླད་འཛིན་སྐྱོང་གནང་བཞིན་པ་ཡིན།
+                          <img class="shop-keepers"src="images/shop_keepers_w.jpg">
+                         <br><br>
+                          ༄༅། །དཔེ་མཛོད་སྡེ་ཚན།
+                          འདིར་སློབ་གཉེར་བ་རྣམས་ཀྱི་ཤེས་ཡོན་ཡར་རྒྱས་ཆེད། བཀའ་བསྟན་གཉིས་ཀྱིས་གཙོས་རིས་མེད་མཁས་གྲུབ་རྣམས་ཀྱི་གསུང་འབུམ་ཁག་དང་དབྱིན་དེབ་འདྲ་མིན། གཞན་ཡང་མཁས་དབང་རྣམས་ཀྱི་གསུང་ཆོས་སྒྲ་འཛིན་འཁོར་ཐག་སྣ་ཚོགས། རྣམ་ཀུན་རྒྱུན་ལས་ཀྱིས་བསྐོས་པའི་མཁན་སློབ་གང་རུང་ཞིག་ནས་གཙོ་འགན་བཞེས་ཐོག་སྐབས་ཐོབ་དཔེ་མཛོད་ལས་བྱེད་རྣམས་ཀྱིས་དཔེ་དེབ་དཀོན་རིགས་རྣམས་བསྡུ་རུབ་དང། དེ་དག་གི་དཀར་ཆག་གསར་བསྒྲིགས། སློབ་གཉེར་བ་རྣམས་ལ་འཛིན་གྲྭ་སོ་སོའི་སློབ་ཚན་དང་། དེ་མིན་ཟུར་བལྟའི་ཕྱག་དཔེ་ཁག་དུས་ཐོག་ཏུ་གཡར་ནས་དཔེ་ཁྲིད་གྲུབ་མཚམས་ཕྱིར་བསྡུ་གནང་བཞིན་ཡོད།<br><br>
+                          ༄༅། །ཞབས་རིམ།
+                          རྒྱུན་ལས་ནས་གཏན་འབེབས་གནང་བའི་མཁན་སློབ་གང་རུང་ཞིག་གིས་གཙོ་འགན་བཞེས་ཐོག དགེ་འདུན་པ་ཡོངས་རྫོགས་སམ་ཡང་ན་འཛིན་གྲྭ་རེས་མོས་སུ་རྒྱལ་བའི་བཀའ་འགྱུར་ཆེན་མོ་དང། གཤེགས་སྙིང་བསྟན་པའི་མདོ་བཅུ། དེ་བཞིན་ཚེ་སྒྲུབ། ཕུར་པ། གསོལ་ཀ་སོགས་གསུངས་སྲོལ་ཡོད། དེ་བཞིན་བསྟན་དང་འགྲོ་བའི་དོན་དུ་དགེ་འདུན་འདུས་པ་ཡོངས་ནས་ཟླ་བ་རེ་ལ་ཐེངས་མ་རེ་སྟེ་ཟླ་འཚོགས་བྱེད་གནང་སྲོལ་ཡོད།
+                          <br><br>
+                          ༄༅། །ལས་བྱེད་གཞན།
+                          གཉེར་པ་ཟུང་ནས་རུང་ཁང་དུ་འདུས་མང་གི་གསོལ་ཇ་དང། གསོལ་ཚིགས་སོགས་ཀྱི་གཟིགས་རྟོག གོ་སྒྲིག་ལས་བྱེད་པས་མཁན་སློབ་ཀྱི་བཀའ་སློབ་དང། བགྲོ་གླེང་སོགས་ཀྱི་སྐབས་ཞབས་སྟེགས་སོགས་བཀོད་སྒྲིག གློག་གི་ལས་བྱེད་པས་བགྲོ་གླེང་དང་བཀའ་སློབ་སོགས་ཀྱི་སྐབས་རྒྱང་བསྒྲགས་སོགས་གྲ་སྒྲིག་དང། རྣམ་ཀུན་གློག་ལ་གཟིགས་རྟོག གློག་བརྙན་ལས་བྱེད་པས་གློག་བརྙན་འཕྲུལ་ཆས་ཉར་ཚགས་ཀྱིས་རེས་གཟའ་སྤེན་པ་དང་ཉི་མ། དེ་བཞིན་ཐུགས་སྤྲོ་གུང་སེང་གི་སྐབས་གློག་བརྙན་གཟིགས་འབུལ། ཅ་དངོས་བདག་གཉེར་པས་སྤྱི་རྫས་ཁག་བདག་ཉར་གནང་ཞིང། དེ་བཞིན་དབུ་མཛད། མཆོད་དཔོན། རྒྱ་གླིང་པ། དུང་ཆེན་པ། དུང་དཀར་བ། རྔ་པ། སྤོས་འདྲེན་པ་སོགས་ནས་ཚོགས་པའི་སྐབས་སུ་འཐུས་ཤོར་མེད་པའི་ཐོག་སོ་སོའི་ལས་འགན་སྒྲུབ་བཞིན་པ་བཅས་སོ།།
+                        </p>
+           </div>
+              
+            <img class="red-line"src="images/line_470x10_trans.png">
+            <div class="back-to-menu"><a href="#mainmenu">ཕྱིར་ལོག</a></div>
+  
+  
+          </div>
+
+
+
+
+        
+        <div>
+            <div class="back-to-menu-end"><img class="end-red-line"src="images/line_470x10_trans.png"><a href="#mainmenu"><p class="end-talk">ཕྱིར་ལོག</p><img src="images/idea_ending_fluorish320.gif"></a></div>
+        </div>
+
+    </div>
+    
+
+
+    
+      
+    
+    <script>
+      const hameburger = document.querySelector(".hameburger");
+      const navBar = document.querySelector(".navbar");
+
+      hameburger.addEventListener("click", () => {
+        hameburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+      })
+
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hameburger.classList.remove("active");
+        navBar.classList.remove("active");
+      }))
+    </script>
+      
+  </body>

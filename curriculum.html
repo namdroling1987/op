@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <style>  
+    body{
+     margin:0 auto;
+     min-width:352px;
+     
+    }
+    *{
+      margin:0;
+      padding:0;
+    }
+    .banner-img-container{
+      display:flex;
+    }
+    .top-banner{
+      margin:0 auto;
+      width:90%;
+      margin-bottom:20px;
+    }
+    .backdrop-container{
+      display:none;
+    }
+    .menubar{
+      display:flex;
+      flex-wrap:wrap;
+      list-style:none;
+      align-items:space-between;
+      display:none;
+      font-size:30px;
+      font-weight:bold;
+    }
+    
+    li{
+      list-style:none;
+    }
+    a{
+      text-decoration:none;
+      font-size:25px;
+    }
+    .hameburger{
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      background-color:rgb(77, 10, 10);
+      padding:10px;
+      border-radius:4px;
+    }
+    
+    .hameburger.active .bar:nth-child(2){
+      opacity:0;  
+    }
+    .hameburger.active .bar:nth-child(1){
+      transform: translateY(10px) rotate(45deg);
+    }
+    .hameburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .navbar{
+      position:fixed;
+      left:-100%;
+      top:50px; 
+    }
+    .nav-menu{
+      background-color:rgb(121, 37, 37);
+      height:100vh;
+      width:400px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:45px;
+      top:30px;  
+    }
+
+    .navbar.active{
+      left:0;
+
+    }
+    .main-menu ul li a{
+        color:brown;	
+		}
+	  .main-menu ul li a:hover{
+			color:rgb(219, 221, 112);
+		}
+		nav ul li a{
+			font-size:40px;
+			color:white;
+			margin-top:40px;
+		}
+		nav ul li a:hover{
+			color:yellow;
+		}
+    .bar{
+      display:block;
+      width:30px;
+      height:4px;
+      margin:5px auto;
+        -webkit-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+        background-color:rgb(255, 255, 255);
+    }
+
+
+    .main-body{
+        width:80%;
+        margin:0 auto;
+    }
+    .photo-text1{
+        width:100%;
+        margin-top:30px;
+        
+    }
+    p{
+        font-size:25px;
+        text-align: justify;
+    }
+
+    .heading{
+        display:flex;
+        justify-content:center;
+        margin-bottom:30px;
+        color:green;
+        font-size:25px;
+        margin-top:20px;
+        text-justify:center;
+    }
+    .red-line{
+        margin:0 auto;
+        width:100%;
+        margin-top:20px;
+    }
+    .red-bar-image{
+        width:100%;
+        margin:0 auto;
+    }
+    .back-to-menu{
+        display:flex;
+        justify-content:center;
+    }
+
+
+    .back-to-menu-end{
+        display:flex;
+        flex-direction:column;
+        gap:50px;
+        margin:0 auto;
+        align-items:center;
+        justify-content:center;
+        
+    }
+    .end-red-line{
+        margin-top:50px;
+    }
+    .end-talk{
+        text-align:center;
+    }
+
+    .sub-menu ul {
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding-top:-4px;
+    }
+   
+    .sub-menu ul li a{
+        color:brown;
+        font-weight:bold;
+        font-size:25px;
+    }
+    .sub-menu ul li a:hover{
+        color:rgb(14, 80, 14);
+    }
+
+
+    /*css written for this pags*/
+
+   .text-curriculum{
+    line-height:45px;
+    text-align:justify;
+   }
+   .paragraph{
+    margin-bottom:20px;
+   }
+   h2{
+    color:brown;
+   }
+   .khenpo-batch{
+    max-width:500px;
+    width:100%;
+
+
+
+
+   }
+   .khenpo-batch-flex{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+   }
+   .pic-name p{
+    color:green;
+   }
+   .pic-name{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:10px;
+   }
+   
+
+   
+   /* @media only screen and ( min-width:626px){
+      .graduate-container1{
+        display:flex;
+        flex-direction:row;
+        background-color:brown;
+        justify-content: space-between;
+        padding-right:20px;
+        padding-left:20px;
+        padding-bottom:20px;
+        padding-top:20px;
+        flex-wrap:wrap;
+    }   
+        
+
+    }*/
+      @media only screen and ( min-width:900px){
+
+     
+      }
+
+   
+        
+        @media only screen and ( min-width:768px){
+          .menubar{
+            display:block;
+            display:flex;
+            flex-wrap:wrap;
+            list-style:none;
+            align-items:space-between;
+            column-gap:20px;
+            
+          }
+          .nav-menu{
+            display:none;
+
+          }
+          .hameburger{
+            display:none;
+          }
+          .content{
+            height:400px;
+            width:500px;
+            margin-top:50px;
+            margin-bottom:50px;
+
+          }
+         
+          .main-menu{
+            max-width:1000px;
+            margin:0 auto;
+          }
+          .red-bar-image{
+            display:block;
+            max-width:790px;
+            margin:0 auto;
+          }
+          .menubar li{
+            margin:0 auto;
+            padding:1%;
+            color:brown;
+
+          }
+          .menubar li:hover{
+            color:yellow;
+            cursor:pointer;
+          }
+          .menubar li:active{
+            color:brown;
+            cursor:progress;
+          }
+          .sub-flex{
+            margin:0 auto;
+            display:flex;
+            flex-direction:row;
+            column-gap: 20px;
+          }
+          .backdrop-container{
+            display:block;
+            margin:0 auto;
+            max-width:1000px;
+          }
+          .top-banner{
+            display:none;
+          }
+          
+          
+
+        }
+
+        @media only screen and (min-width:1280px){
+          body{
+            max-width:1280px;
+          }
+          .main-menu{
+            font-size:30px;
+            font-weight:bold;
+          }
+          
+          .red-bar-image{
+            margin-top:5px;
+          }
+          
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header"></div>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" >མདུན་ངོས།</a></li> 
+        <li class="nav-item"><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+        <li class="nav-item"><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+        <li class="nav-item"><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+        <li class="nav-item"><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུནལས།</a></li>
+        <li class="nav-item"><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+        <li class="nav-item"><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+        <li class="nav-item"><a href="teachers.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+        <li class="nav-item"><a href="teachers.html">སློབ་དཔོན་རྣམས།</a></li>
+        <li class="nav-item"><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+        <li class="nav-item"><a href="gallary.html">བརྙན་པར།</a></li>
+        <li class="nav-item"><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+        <li class="nav-item"><a href="library">ཆོས་མཛོད།</a></li>
+      </ul>
+    </nav>
+      <div class="hameburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <div id="mainmenu" class="banner-img-container">
+      
+        <img  class="top-banner"src="images/backdrop_480_9.png">
+    </div>
+    <div class="backdrop-container">
+      <img class="backdrop-image"src="images/backdrop_default13.png">
+    </div>
+    <div class="main-menu">
+      <ul class="menubar">
+        <li><a href="index.html">མདུན་ངོས།</a></li> 
+        <li><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+        <li><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+        <li><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+        <li><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུན་ལས།</a></li>
+        <li><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+        <li><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+        <li><a href="nni_graduate.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+        <li><a href="nni_graduate.html">སློབ་དཔོན་རྣམས།</a></li>
+        <li><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+        <li><a href="gallary.html">བརྙན་པར།</a></li>
+        <li><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+        <li><a href="library.html">ཆོས་མཛོད།</a></li>
+      </ul>
+    </div>
+    
+    <div class="main-body">
+        <img class="red-bar-image"src="images/line_470x10_trans.png">
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#curriculum">སློབ་མཚན།</a></li>
+                    <li><a href="#examination">རྒྱུགས་སྤྲོད་ཀྱི་རིམ་པ།</a></li>
+                    <li><a href="#certificate">ཕྱག་ཁྱེར་གནང་ཕྱོགས།</a></li>
+                    <li><a href="#teacheraid">སྐྱོར་དཔོན།</a></li>
+                </ul>
+            </div>
+    
+        <img class="red-line"src="images/line_470x10_trans.png">
+       <div the-body>
+            <p id="curriculum"class="text-curriculum">སྤྱི་ལོ་ ༡༩༧༨ ལོར་༸སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེའི་དགོངས་དོན་ལྟར་མཁན་རིན་པོ་ཆེ་བརྩོན་འགྲུས་མཆོག་གིས་ལོ་དགུའི་སློབ་ཚན་ཁག་གཏན་འབེབས་གནང་། སླར་ཡང་ སྤྱི་ལོ་ ༡༠༨༧ ཟླ་བ་ ༡ ནང་ ༸སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་མཆོག་དང་། ༸སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་རྣམ་གཉིས་ཀྱི་བཀའ་སློབ་དགོངས་དོན་ཟབ་མོའི་གཞིར་བཟུང་། དམིགས་བསལ་གདན་ཞུས་ཀྱིས་ཕྱོགས་མཐའ་ཁག་ནས་ཕེབས་པའི་མཁས་དབང་ཁག་དང་། འདི་གའི་མཁན་སློབ་ལས་བྱེད་ལྷན་འཛོམས་ཐོག་བཀའ་བགྲོས་ཞིབ་རྒྱས་གནང་མཐར་སྔར་གཏན་འབེབས་ཟིན་པའི་སློབ་ཚན་ལ་ཅུང་ཟད་འཕྲི་སྣོན་དང་། ཕྱི་ནང་གི་སྲོལ་བཟང་ལེགས་བཏུས་ཀྱིས་གཏན་འབེབས་གནང་། སྤྱི་ལོ་ ༡༩༩༨ ལོར་ ༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་བཀའ་དགོངས་གཞིར་བཟུང་ཐོག་རྒྱུན་ལས་ལྷན་འཛོམས་ཀྱིས་སྔ་འགྱུར་ཐུན་མིན་ལྟ་གྲུབ་རྩལ་འདོན་བྱུང་སླད་སླར་ཡང་གཏན་འབེབས་གནང་བ་དང་། ༸གོང་ས་ཡིད་བཞིན་ནོར་བུའི་བཀའ་དགོངས་ལྟར་སྤྱི་ལོ་ ༢༠༡༤ ལོར་རྣམ་གླིང་ཆེས་མཐོའི་འགན་འཛིན་རྣམ་པ་དང་། བཤད་གྲྭའི་རྒྱུན་ལས་གཉིས་ལྷན་འཛོམས་ཐོག་བརྗོད་གཞི་མཁན་ཆེན་ཞི་འཚོས་མཛད་པའི་ཚད་མ་དེ་ཁོ་ན་ཉིད་བསྡུས་པའི་ཚིག་ལེའུར་བྱས་པ་དེ་ཉིད་སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོའི་སློབ་ཚན་དུ་བཞག་རྒྱུའི་ཐག་གཅོད་བྱུང་དོན་ལྟར་ཚད་མ་རྣམ་འགྲེལ་གྱི་བརྗོད་བྱ་དང་མཐུན་པར་ཚད་མ་དེ་ཁོ་ན་ཉིད་ལོ་རིམ་བཞི་པོ་སོ་སོར་བགོས་པ་བཅས་ནི་གཤམ་གསལ་ལྟར་རོ།།
+            </p>
+            <br> <br> <br>
+        
+            
+               
+          
+
+                    </span><span style="color:#800000;"><strong>སྔོན་འགྲོའི་འཛིན་གྲྭ།<br>སློབ་ཚན།</strong><br></span><span style="color:#000000;"><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0003;toc.depth=1;toc.id=;brand=default" class="return_link">དག་ཡིག་པད་དཀར་ཆུན་པོ། </a>བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ། <a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0002;toc.depth=1;toc.id=;brand=default" class="return_link">དཀའ་གནད་གསལ་བའི་མེ་ལོང་།</a>&nbsp; <a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0001;toc.depth=1;toc.id=;brand=default" class="return_link"> ལེགས་བཤད་ལྗོན་དབང་། </a>དབྱངས་ཅན་གྲུབ་པའི་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0028;toc.depth=1;toc.id=d0e0028;brand=default" class="return_link">རྟགས་རིགས་ཆོས་ཀྱི་སྒོ་འབྱེད།</a>&nbsp;&nbsp; <a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0004;toc.depth=1;toc.id=d0e0004;brand=default" class="return_link">བསྡུས་ཚན་རིགས་ལམ་སྒོ་འབྱེད།</a>&nbsp;&nbsp;&nbsp; <a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNIN001/NNIN001.xml;chunk.id=d0e0034;toc.depth=1;toc.id=d0e0034;brand=default" class="return_link">བློ་རིགས་བློ་ཡི་སྒོ་འབྱེད།</a><br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་དང་པོ།<br>༼ རྩ་བའི་སློབ་ཚན༽</strong></span><span style="color:#000000;"><br>སྡོམ་གསུམ་རྣམ་པར་ངེས་པའི་བསྟན་བཅོས།&nbsp; མངའ་རིས་པཎ་ཆེན་པདྨ་དབང་རྒྱལ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0014;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">དེའི་མཆན་འགྲེལ་རིག་འཛིན་འཇུག་ངོག</a>&nbsp; མཁན་པོ་ཡོན་དགའ།<br>བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ།&nbsp; རྒྱལ་སྲས་ཞི་བ་ལྷ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ་ཞེས་བྱ་བའི་མཆན་འགྲེལ།</a>&nbsp; གཞན་ཕན་སྣང་བ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན ༽</strong></span><span style="color:#000000;"><br>ལུང་སྟོན་པ་རྩ་བ་སུམ་བཅུ་པ།&nbsp; ཐུ་མི་སམ་བྷོ་ཌ།<br>དེའི་འགྲེལ་པ་འཕྲུལ་གྱི་ལྡེ་མིག&nbsp; རྒྱལ་སྲས་གཞན་ཕན།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0033;toc.depth=1;toc.id=d0e0032;brand=default" class="return_link">ཡང་ན་འགྲེལ་པ་ནོར་བུའི་མེ་ལོང་།</a>&nbsp; མཁན་པོ་བརྩོན་འགྲུས།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0042;toc.depth=1;toc.id=d0e0032;brand=default" class="return_link">རྟགས་རིགས་ཀྱི་རྣམ་བཞག</a>&nbsp; མཁན་པོ་བརྩོན་འགྲུས།<br>ཀ་རི་ཀྰ་ལྔ་བཅུ་པའི་ཚིག་ལེའུ་བྱས་པ།&nbsp; སློབ་དཔོན་ཀླུ་སྒྲུབ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0062;toc.depth=1;toc.id=d0e0062;brand=default" class="return_link">དེའི་མཆན་འགྲེལ་ནོར་བུའི་འཕྲེང་བ།</a> ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>ཁྱད་པར་འཕགས་པའི་བསྟོད་པ།&nbsp; སློབ་དཔོན་མཐོ་བཙུན་གྲུབ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0061;toc.depth=1;toc.id=d0e0032;brand=default" class="return_link">དེའི་འགྲེལ་པ།</a>&nbsp;&nbsp;&nbsp; སློབ་དཔོན་ཤེས་རབ་གོ་ཆ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY001/NNITY001.xml;chunk.id=d0e0064;toc.depth=1;toc.id=d0e0032;brand=default" class="return_link">གངས་ལྔོངས་རྒྱལ་བསྟན་ཡོངས་ཀྱི་ཕྱི་མོ་སྔ་འགྱུར་རྡོ་རྗེ་ཐེག་པའི་བསྟན་པ་རིན་པོ་ཆེ་ཇི་ལྟར་བྱུང་བའི་ཚུལ་དག་ཅིང་གསལ་བར་བརྗོད་པ་ལྷ་དབང་གཡུལ་ལས་རྒྱལ་བའི་རྔ་བོ་ཆེའི་སྒྲ་དབྱངས་ཞེས་བྱ་བའི་སྐབས་དང་པོ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་གཉིས་པ།<br>༼ རྩ་བའི་སློབ་ཚན་ ༽</strong></span><span style="color:#000000;"><br>དབུ་མ་རྒྱན་གྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; མཁན་ཆེན་ཞི་བ་འཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0002;brand=default" class="return_link">དེའི་འགྲེལ་པ་འཇམ་དབྱངས་བླ་མ་དགྱེས་པའི་ཞལ་ལུང་།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0012;toc.depth=1;toc.id=d0e0012;brand=default" class="return_link">མཁས་པའི་ཚུལ་ལ་འཇུག་པའི་སྒོ་ཞེས་བྱ་བའི་བསྟན་བཅོས།</a>&nbsp;&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན་ ༽</strong></span><span style="color:#000000;"><br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0534;toc.depth=1;toc.id=d0e0534;brand=default" class="return_link">ཡིད་བཞིན་མཛོད་ཀྱི་གྲུབ་བསྡུས།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>ལུང་སྟོན་པ་རྟགས་ཀྱི་འཇུག་པ།&nbsp; ཐུ་མི་སམ་བྷོ་ཌ།<br>དེའི་འགྲེལ་པ་འཕྲུལ་གྱི་ལྡེ་མིག&nbsp; རྒྱལ་སྲས་གཞན་ཕན།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0528;toc.depth=1;toc.id=d0e0528;brand=default" class="return_link">ཡང་ན་འགྲེལ་པ་ནོར་བུའི་མེ་ལོང་།</a> མཁན་ཆེན་བརྩོན་འགྲུས།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0560;toc.depth=1;toc.id=d0e0560;brand=default" class="return_link">ཆོས་འབྱུང་ལྷ་དབང་གཡུལ་ལས་རྣམ་པར་རྒྱལ་བའི་རྔ་བོ་ཆེའི་སྒྲ་དབྱངས་སྐབས་གཉིས་པ་དང་གསུམ་པ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY002/NNITY002.xml;chunk.id=d0e0560;toc.depth=1;toc.id=d0e0560;brand=default" class="return_link">རྒྱལ་རབས་དྭངས་ཤེལ་འཕྲུལ་གྱི་མེ་ལོང་དབུ་ནས་ཁྲི་སྲོང་བར།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་གསུམ་པ།<br>༼ རྩ་བའི་སློབ་ཚན་༽</strong><br></span><span style="color:#000000;"><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0047;toc.depth=1;toc.id=d0e0047;brand=default" class="return_link">དབུ་མ་འཇུག་པ་དང་དེའི་རང་འགྲེལ།</a>&nbsp; སློབ་དཔོན་ཟླ་བ་གྲགས་པ།<br>དབུ་མ་རྩ་བའི་ཚིག་ལེའུར་བྱས་པ།&nbsp; སློབ་དཔོན་ཀླུ་སྒྲུབ།<br><a href="0e0019;toc.depth=1;toc.id=d0e0019;brand=default" class="return_link">དེའི་འགྲེལ་བ་ཀླུ་དབང་དགོངས་རྒྱན།</a> ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>བསྟན་བཅོས་བཞི་བརྒྱ་པ་ཞེས་བྱ་བ།&nbsp; སློབ་དཔོན་འཕགས་པ་ལྷ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0002;brand=default" class="return_link">དེའི་འགྲེལ་བ་ཀླུ་དབང་དགོངས་རྒྱན།</a> བོད་པ་སྤྲུལ་སྐུ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན་ ༽</strong></span><span style="color:#000000;"><br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0093;toc.depth=1;toc.id=d0e0093;brand=default" class="return_link">ཆོས་འབྱུང་ལྷ་དབང་གཡུལ་རྒྱལ་སྐབས་བཞི་པ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0078;toc.depth=1;toc.id=d0e0078;brand=default" class="return_link">རྒྱལ་རབས་ཁྲི་སྲོང་ནས་དུམ་བུ་དང་པོ་ཆ་ཚང་།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0076;toc.depth=1;toc.id=d0e0076;brand=default" class="return_link">ཚད་མ་རིག་པའི་སྒོ་ཞེས་བྱ་བ།</a>&nbsp; སློབ་དཔོན་ཕྱོགས་གླང་།<br>དོན་རྣམ་པར་ངེས་པ་ཤེས་རབ་རལ་གྲི།&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྣམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0071;toc.depth=1;toc.id=d0e0071;brand=default" class="return_link">དེའི་འགྲེལ་བ་ཐུབ་བསྟན་ཡོངས་རྫོགས་སྣང་བྱེད།</a> བསྟན་པའི་རྒྱལ་མཚན།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY003/NNITY003.xml;chunk.id=d0e0060;toc.depth=1;toc.id=d0e0060;brand=default" class="return_link">སྙན་ངག་ལེའུ་བར་བའི་འགྲེལ་པ་དོན་གཞན་བཀོད་པ་ཡན།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་བཞི་པ།<br>༼ རྩ་བའི་སློབ་ཚན།༽</strong><br></span><span style="color:#000000;">དམ་ཆོས་མངོན་པ་མཛོད་ཀྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; སློབ་དཔོན་དབྱིག་གཉེན།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0006;toc.depth=1;toc.id=d0e0006;brand=default" class="return_link">དེའི་འགྲེལ་པ་རིན་པོ་ཆེའི་དོ་ཤལ་བློ་གསལ་དགྱེས་པའི་མགུལ་རྒྱན།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>རྒྱས་པའི་བསྟན་བཅོས་ཚད་མ་རྣམ་འགྲེལ་གྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; སློབ་དཔོན་ཆོས་ཀྱི་གྲགས་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0016;toc.depth=1;toc.id=d0e0016;brand=default" class="return_link">དེའི་འགྲེལ་པ་ལེགས་བཤད་སྣང་བའི་གཏེར་ལེའུ་གཉིས་པ།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>རྣམ་འགྲེལ་ལེའུ་གཉིས་པའི་བརྗོད་བྱ་དང་མཐུན་པའི་ཚད་མ་དེ་ཁོ་ན་ཉིད།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0002;brand=default" class="return_link">ཚད་མ་གཞན་བརྟག་པ་ཉེར་གསུམ་པ། འཇིག་རྟེན་རྒྱང་འཕེན་པ་བརྟག་པ་ཉེར་དྲུག་པ། རང་ལས་ཚད་མ་བརྟག་པ་ཉེར་དགུ་པ། དབང་པོ་ལས་འདས་པའི་དོན་མཐོང་བ་ཅན་གྱི་སྐྱེས་བུ་བརྟག་པ་སུམ་ཅུ་པ། </a><br>&nbsp; མཁན་ཆེན་ཞི་བ་འཚོ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན་ ༽</strong></span><span style="color:#000000;"><br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0041;toc.depth=1;toc.id=d0e0041;brand=default" class="return_link">རྒྱལ་རབས་དུམ་བུ་གཉིས་པ་དང་གསུམ་པ།</a>&nbsp;&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0039;toc.depth=1;toc.id=d0e0039;brand=default" class="return_link">ཆོས་འབྱུང་ལྷ་དབང་གཡུལ་རྒྱལ་སྐབས་ལྔ་པ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0049;toc.depth=1;toc.id=d0e0049;brand=default" class="return_link">སྙན་ངག་འགྲེལ་པའི་ཐོག་ལྡོག་པ་ཅན་གྱི་རྒྱན་ནས་ལེའུ་བར་པ་ཆ་ཚང་།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0019;toc.depth=1;toc.id=d0e0019;brand=default" class="return_link">ཤེས་རབ་ལེའུའི་འགྲེལ་པ་ཀེ་ཏ་ཀ</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>དབུས་དང་མཐའ་རྣམ་པར་འབྱེད་པའི་བསྟན་བཅོས།&nbsp; རྒྱལ་ཚབ་བྱམས་པ་མགོན་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0047;toc.depth=1;toc.id=d0e0047;brand=default" class="return_link">དེའི་འགྲེལ་པ་འོད་ཟེར་ཕྲེང་བ།</a> ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY004/NNITY004.xml;chunk.id=d0e0025;toc.depth=1;toc.id=d0e0025;brand=default" class="return_link">རྒྱལ་བ་དཔལ་ཡུལ་བའི་གདན་རབས་འཆི་མེད་ཡོངས་འདུའི་ལྗོན་པའི་ཕྲེང་བ།</a>&nbsp; འཇམ་དཔལ་བཟང་པོ།<br><br></span><span style="color:#800000;"><strong>མདོ་གོང་མ་ལོ་རིམ་ལྔ་པ།<br>༼ རྩ་བའི་སློབ་ཚན་ ༽</strong><br></span><span style="color:#000000;">ཐེག་པ་ཆེན་པོའི་རྒྱུད་བླ་མའི་བསྟན་བཅོས།&nbsp; རྒྱལ་ཚབ་བྱམས་པ་མགོན་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0031;toc.depth=1;toc.id=d0e0031;brand=default" class="return_link">དེའི་འགྲེལ་བ་མི་ཕམ་ཞལ་ལུང་།</a> ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>སྟོང་ཐུན་སེངྒེའི་ང་རོ།&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>ངེས་ཤེས་རིན་པོ་ཆེ་སྒྲོན་མེ།&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0002;brand=default" class="return_link">ངེས་ཤེས་རིན་པོ་ཆེའི་སྒྲོན་མེའི་ཚིག་གི་དོན་གསལ་བའི་འགྲེལ་ཆུང་བློ་གྲོས་སྣང་བའི་སྒོ་འབྱེད།</a>&nbsp; མཁན་ཆེན་ཀུན་བཟང་དཔལ་ལྡན།<br>ཚད་མ་རྣམ་འགྲེལ་གྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; སློབ་དཔོན་ཆོས་ཀྱི་གྲགས་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0037;toc.depth=1;toc.id=d0e0037;brand=default" class="return_link">དེའི་འགྲེལ་ཆེན་ལེགས་བཤད་སྣང་བའི་གཏེར་ལེའུ་དང་པོ།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>རྣམ་འགྲེལ་ལེའུ་དང་པོའི་བརྗོད་བྱ་དང་མཐུན་པའི་ཚད་མ་དེ་ཁོ་ན་ཉིད་བསྡུས་པའི་ཚིག་ལེའུར་བྱས་པ། <br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0014;toc.depth=1;toc.id=d0e0014;brand=default" class="return_link">རང་བཞིན་བརྟག་པ་དང་པོ་ནས་ལས་དང་འབྲས་བུའི་འབྲེལ་བ་བརྟག་པ་བཅུ་བཞི་པ་ རྗེས་དཔག་བརྟག་པ་ཉེར་གཉིས་པ།</a> མཁན་ཆེན་ཞི་བ་འཚོ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན་༽</strong></span><span style="color:#000000;"><br>ཐེག་པ་ཆེན་པོ་མདོ་སྡེ་རྒྱན་ཞེས་བྱ་བ།&nbsp; རྒྱལ་ཚབ་བྱམས་པ་མགོན་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0040;toc.depth=1;toc.id=d0e0040;brand=default" class="return_link">ཐེག་ཆེན་མདོ་སྡེ་རྒྱན་གྱི་དགོངས་དོན་རྣམ་པར་བཤད་པ་ཐེག་མཆོག་བདུད་རྩིའི་དགའ་སྟོན།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0064;toc.depth=1;toc.id=d0e0064;brand=default" class="return_link">ལྟ་གྲུབ་ཤན་འབྱེད།</a> བོད་པ་སྤྲུལ་སྐུ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY005/NNITY005.xml;chunk.id=d0e0062;toc.depth=1;toc.id=d0e0062;brand=default" class="return_link">ཆོས་འབྱུང་ལྷ་དབང་གཡུལ་རྒྱལ་སྐབས་དྲུག་པ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་དྲུག་པ།<br>༼&nbsp; རྩ་བའི་སློབ་ཚན་ ༽</strong><br></span><span style="color:#000000;"><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པའི་མན་ངག་གི་བསྟན་བཅོས་མངོན་པར་རྟོགས་པའི་རྒྱན།</a>&nbsp; རྒྱལ་ཚབ་བྱམས་པ་མགོན་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0003;toc.depth=1;toc.id=d0e0003;brand=default" class="return_link">དེའི་འགྲེལ་པ་དོན་གསལ།</a>&nbsp; སློབ་དཔོན་སེངྒེ་བཟང་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0012;toc.depth=1;toc.id=d0e0012;brand=default" class="return_link">ཤེར་ཕྱིན་སྤྱི་དོན།</a>&nbsp;&nbsp; དཔལ་སྤྲུལ་སེམས་དཔའ་ཆེན་པོ།<br>ཚད་མ་རྣམ་འགྲེལ་གྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; དཔལ་ལྡན་ཆོས་ཀྱི་གྲགས་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0025;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">དེའི་འགྲེལ་པ་ལེགས་བཤད་སྣང་བའི་གཏེར་གྱི་ལེའུ་གསུམ་པ།&nbsp; </a>ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>རྣམ་འགྲེལ་ལེའུ་གསུམ་པའི་བརྗོད་བྱ་དང་མཐུན་པའི་ཚད་མ་དེ་ཁོ་ན་ཉིད།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0021;toc.depth=1;toc.id=d0e0021;brand=default" class="return_link">མངོན་སུམ་གྱི་མཚན་ཉིད་བརྟག་པ་ཉེར་གཅིག་པ། ཕྱི་རོལ་གྱི་དོན་བརྟག་པ་ཉེར་བདུན་པ། ཐོས་པ་བརྟག་པ་ཉེར་བརྒྱད་པ།</a> མཁན་ཆེན་ཞི་བ་འཚོ།<br><br></span><span style="color:#800000;"><strong>༼ ཡན་ལག་སློབ་ཚན་ ༽</strong></span><span style="color:#000000;"><br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0027;toc.depth=1;toc.id=d0e0026;brand=default" class="return_link">སོ་སོར་ཐར་པའི་མདོ།</a> སངས་རྒྱས།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0028;toc.depth=1;toc.id=d0e0026;brand=default" class="return_link">དེའི་མཆན་འགྲེལ།</a>&nbsp; གཞན་ཕན་སྣང་བ།<br>ཆོས་དང་ཆོས་ཉིད་རྣམ་པར་འབྱེད་པའི་བསྟན་བཅོས།&nbsp; རྒྱལ་ཚབ་བྱམས་པ་མགོན་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0031;toc.depth=1;toc.id=d0e0026;brand=default" class="return_link">དེའི་འགྲེལ་པ་ཡེ་ཤེས་སྣང་བ་རྣམ་འབྱེད།</a> ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY006/NNITY006.xml;chunk.id=d0e0032;toc.depth=1;toc.id=d0e0026;brand=default" class="return_link">ཆོས་འབྱུང་ལྷ་དབང་གཡུལ་རྒྱལ་སྐབས་བདུན་པ་དང་བརྒྱད་པ།</a>&nbsp; བདུད་འཇོམས་འཇིགས་བྲལ་ཡེ་ཤེས་རྡོ་རྗེ།<br><br></span><span style="color:#800000;"><strong>རྒྱུད་སྡེ་གོང་འོག་ལོ་རིམ་བདུན་པ།<br>༼ རྩ་བའི་སློབ་ཚན་ ༽</strong><br></span><span style="color:#000000;">འདུལ་བ་མདོ་རྩ་གཞི་སྟོད།&nbsp; སློབ་དཔོན་ཡོན་ཏན་འོད།<br>དེའི་མཆན་འགྲེལ་པདྨ་དཀར་པོའི་ལྔོན་ཤིང་།&nbsp; གཞན་ཕན་སྣང་བ།<br>ཚད་མ་རྣམ་འགྲེལ་གྱི་ཚིག་ལེའུར་བྱས་པ།&nbsp; དཔལ་ལྡན་ཆོས་ཀྱི་གྲགས་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY007/NNITY007.xml;chunk.id=d0e0168;toc.depth=1;toc.id=0;brand=default" class="return_link">དེའི་འགྲེལ་བ་ལེགས་བཤད་སྣང་བའི་གཏེར་ལའུ་བཞི་པ།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>རྣམ་འགྲེལ་ལེའུ་བཞི་པ་དང་མཐུན་པར་ཚད་མ་དེ་ཁོ་ན་ཉིད་བསྡུས་པའི་ཚིག་ལེའུར་བྱས་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY007/NNITY007.xml;chunk.id=d0e0163;toc.depth=1;toc.id=d0e0163;brand=default" class="return_link">རྫས་ཀྱི་དོན་བརྟག་པ་བཅོ་ལྔ་པ། སྒྲའི་དོན་བརྟག་པ་ཉི་ཤུ་པ། འགྱུར་བར་སྨྲ་བ་བརྟག་པ་ཉེར་བཞི་པ། དུས་གསུམ་བརྟག་པ་ཉེར་ལྔ་པ།</a> མཁན་ཆེན་ཞི་བ་འཚོ།<br>ཡོན་ཏན་རིན་པོ་ཆེའི་མཛོད་དགའ་བའི་ཆར།&nbsp; རིགས་འཛིན་འཇིགས་མེད་གླིང་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY007/NNITY007.xml;chunk.id=d0e0015;toc.depth=1;toc.id=d0e0015;brand=default" class="return_link">དེའི་འགྲེལ་པ་ཉི་མའི་འོད་ཟེར་དང་ཟླ་བའི་འོད་ཟེར།</a>&nbsp; མཁན་པོ་ཡོན་དགའ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY007/NNITY007.xml;chunk.id=d0e0001;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">གསང་སྙིང་འགྲེལ་པ་ཕྱོགས་བཅུ་མུན་སེལ་གྱི་སྤྱི་དོན་འོད་གསལ་སྙིང་པོ།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>སྤྱི་མདོ་དགོངས་པ་འདུས་པ། ཆོས་སྐུ་ཀུན་ཏུ་བཟང་པོ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY007/NNITY007.xml;chunk.id=d0e0174;toc.depth=1;toc.id=d0e0174;brand=default" class="return_link">དེའི་འགྲེལ་པ་རྣལ་འབྱོར་ཉི་མ་གསལ་བར་བྱེད་པའི་ལེགས་བཤད་གཟི་ལྡན་འཆར་ཁའི་འོད་སྣང་དོ་གལ་ཅན་གྱི་ལེའུ་ཁག་གསུམབཞི་བཤད་ཁྲིད་དང་ལྷག་མ་ལུང་།</a>&nbsp; མཁན་ནུས་ལྡན།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་བརྒྱད་པ།<br>༼ རྩ་བའི་སློབ་ཚན་༽</strong><br></span><span style="color:#000000;">འདུལ་བ་མདོ་རྩ་གཞི་སྨད།&nbsp; སློབ་དཔོན་ཡོན་ཏན་འོད།<br>དེའི་མཆན་འགྲེལ་པདྨ་དཀར་པོའི་ལྗོན་ཤིང་།&nbsp; གཞན་ཕན་སྣང་བ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY008/NNITY008.xml;chunk.id=d0e0018;toc.depth=1;toc.id=;brand=default" class="return_link">མན་ངག་ལྟ་བའི་ཕྲེང་བ།</a>&nbsp; སློབ་དཔོན་པདྨ་འབྱུང་གནས།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY008/NNITY008.xml;chunk.id=d0e0021;toc.depth=1;toc.id=;brand=default" class="return_link">སྣང་བ་ལྷ་སྒྲུབ་ཆེན་མོ།</a>&nbsp; ཀུན་མཁྱེན་རོང་ཟོམ་མ་ཧྰ་པཎྜི་ཏ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY008/NNITY008.xml;chunk.id=d0e0022;toc.depth=1;toc.id=d0e0022;brand=default" class="return_link">ཡིད་བཞིན་རིན་པོ་ཆེའི་མཛོད་དང་དེའི་རང་འགྲེལ་པདྨ་དཀར་པོ།</a> ཀུན་མཁྱེན་ཀློང་ཆེན་རབས་འབྱམས།<br>གསང་བ་སྙིང་པོ། ཆོས་སྐུ་ཀུན་ཏུ་བཟང་པོ། <a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNITY008/NNITY008.xml;chunk.id=d0e0001;toc.depth=1;toc.id=d0e0001;brand=default" class="return_link">དེའི་འགྲེལ་པ་སྤྱི་དོན་མཛོད་ཀྱི་ལྡེ་མིག།</a> རྡོ་གྲུབ་བསྟན་པའི་ཉི་མ།<br><br></span><span style="color:#800000;"><strong>ལོ་རིམ་དགུ་པ།<br>༼ རྩ་བའི་སློབ་ཚན་ ༽</strong><br></span><span style="color:#000000;"><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNYT009/NNYT009.xml;chunk.id=d0e0089;toc.depth=1;toc.id=0;brand=default" class="return_link">རང་གྲོལ་སྐོར་གསུམདང་དེའི་རང་འགྲེལ།</a> ཀུན་མཁྱེན་ཀློང་ཆེན་རབ་འབྱམས།<br>ཡང་ན་ཐེག་ཆེན་ཚུལ་འཇུག ཀུན་མཁྱེན་རོང་ཟོམ་མ་ཧྰ་པཎྜི་ཏ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNYT009/NNYT009.xml;chunk.id=d0e0002;toc.depth=1;toc.id=d0e0002;brand=default" class="return_link">སྒྲུབ་པ་བཀའ་བརྒྱད་ཀྱི་རྣམ་བཤད་དངོས་གྲུབ་སྙིང་པོ།</a>&nbsp; ཀུན་མཁྱེན་མི་ཕམ་རྒྱ་མཚོ།<br>བསྐྱེད་རིམ་ཁྲིད་ཡིག་འོག་མིན་བགྲོད་པའི་ཐེམ་སྐས།&nbsp; རིག་འཛིན་འཇིགས་མེད་གླིང་པ།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNYT009/NNYT009.xml;chunk.id=d0e0141;toc.depth=1;toc.id=;brand=default" class="return_link">སྲོག་སྡོམ་གཟེར་བཞིའི་མན་ངག་ཚངས་པའི་སྒྲ་དབྱངས།</a>&nbsp; དཔལ་སྤྲུལ་སེམས་དཔའ་ཆེན་པོ།<br>རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོ། ཀུན་མཁྱེན་ཀློང་ཆེན་རབ་འབྱམས།<br><a href="http://137.184.196.200:8080/xtf/view?docId=tei/NNYT009/NNYT009.xml;chunk.id=d0e0143;toc.depth=1;toc.id=d0e0143;brand=default" class="return_link">རྫོགས་པ་ཆེན་པོ་སེམས་ཉིད་ངལ་གསོའི་འགྲེལ་པ་ཤིང་རྟ་ཆེན་པོ</a>།&nbsp; ཀུན་མཁྱེན་ཀློང་ཆེན་རབ་འབྱམས།</span><br><br><br>
+                    <h2 id="examination">༄༅། །རྒྱུགས་སྤྲོད་ཀྱི་རིམ་པ།</h2>
+                    <p class="paragraph">
+                        དེ་ཡང་སྤྱིར་མཁས་པའི་བྱ་བ་རྣམ་གསུམ་ལས་རྩོམ་རིག་ལ་གོམས་པ་རྒྱ་བསྐྱེད་ཅིང་རང་གིས་སྦྱངས་པ་བྱས་པའི་གནས་སྐབས་ཀྱི་གྲུབ་དོན་གསལ་ཐུབ་པ་དང་། ལྷག་པར་དུ་དེང་རབས་ཀྱི་མཐོ་སློབ་ཆེན་པོ་ཁག་གི་ལུགས་སྲོལ་དང་མཐུན་པར། ༧སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་བཀའ་དགོངས་ལྟར་གསར་ཞུགས་ཡིག་རྒྱུགས་དང་། དེ་བཞིན་ཟླ་འཁོར་དང་ལོ་འཁོར་ཡིག་རྒྱུགས་ལེན་པའི་སྲོལ་སྐྱོང་བཞིན་ཡོད།
+                        </p>
+
+
+                    <h2>༄༅། །གསར་ཞུགས་རྒྱུགས་སྤྲོད།</h2>    
+                    <p class="paragraph">
+                        ལོ་ལྟར་བོད་ཟླ་ ༢  ཚེས་  ༣ ཉིན་བཤད་གྲྭ་དབུ་འཛུགས་སྐབས་དམིགས་བསལ་ཐོབ་རིགས་མ་གཏོགས་སློབ་གཉེར་བ་བཤད་གྲྭར་གསར་དུ་ཞུགས་འདོད་ཡོད་པ་རྣམས་ཀྱིས་བྲིས་རྒྱུགས་དང་ངག་རྒྱུགས་ངེས་པར་དུ་གཏོང་དགོས། བྲིས་རྒྱུགས་ཀྱི་དུས་ཚོད་སྐབས་ཐོབ་གསལ་སྒྲགས་ལྟར་འཛོམས། ལོ་འཁོར་རྒྱུགས་སྤྲོད་དོ་དམ་པས་གཙོ་འགན་བཞེས་པས་སུམ་རྟགས་དང་རྒྱལ་རབས་ཆོས་འབྱུང་སོགས་ཀྱི་དྲི་བ་རྣམས་དྲི་ཤོག་གཅིག་ཏུ་བྲིས་ནས་བཀྲམ། ཡིག་རྒྱུགས་གྱི་དུས་ཡུན་ཆུ་ཚོད་  ༣་ཡོད། དྲི་ཤོག་ཞིབ་ཚགས་བཀླགས་རྗེས་གཙོ་བོ་བརྗོད་བྱ་དང་། དེ་བཞིན་དག་ཆ་དང་སྡེབ་སྦྱོར། ཡིག་གཟུགས་སོགས་གང་ལེགས་བྲིས་ཏེ་མཐའ་གྲུབ་སྐབས་སོ་སོའི་མིང་བཀོད་ནས་རྒྱུགས་བཞེས་པར་འབུལ་དགོས། དེ་རྗེས་མཁན་སློབ་རྣམས་ཀྱིས་ཐུན་མོང་རིག་གནས་དང་། ཐུན་མིན་ནང་དོན་སྐོར་ངག་རྒྱུགས་ལེན་སྲོལ་ཡོད། བོད་ཟླ་  ༢   ཚེས་  ༨  ཉིན་ལོ་འཁོར་རྒྱུགས་སྤྲོད་ཀྱི་གྲུབ་འབྲས་ཨང་ཐོབ་ཤོག་ལྷེ་གནང་གྲུབ་མཚམས་གསར་ཞུགས་ཀྱི་རྒྱུགས་འཕྲོད་རིགས་རྣམས་ཀྱི་མཚན་ཐོ་གསལ་བསྒྲགས་གནང་སྐབས་བཤད་གྲྭར་ཚུད་ཡོད་མེད་གསལ་ཐུབ།</p>
+                    
+                        
+                    <h2>༄༅། །ཟླ་འཁོར་རྒྱུགས་སྤྲོད།</h2>    
+                    <p class="paragraph">
+                        དེ་ལ་འཛིན་རིམ་དང་པོ་དང་གཉིས་པ་གཉིས་སུ་རྩ་བའི་སློབ་ཚན་རྣམས་གཙོར་བྱས་ཟླ་རེར་བྲིས་རྒྱུགས་ཀྱི་རིམ་པ་སྟབས་གང་འགྲིགས་ལ་ལེན་བཞིན་ཡོད། དེ་ནི་ལོ་འཁོར་རྒྱུགས་སྤྲོད་ལ་ཉམས་མྱོང་འཐོབ་ཕྱིར་ཡིན། འཛིན་རིམ་གསུམ་པ་ཡན་ཆད་ཟླ་རྒྱུགས་ལེན་སྲོལ་མེད། ཟླ་རྒྱུགས་ཀྱི་དྲི་བ་ཁག་སོ་སོའི་འཛིན་གྲྭའི་མཁན་སློབ་ཀྱིས་བཀོད་ཅིང་། རྒྱུགས་སྤྲོད་ཀྱི་དུས་ཡུན་སོགས་གསར་ཞུགས་རྒྱུགས་སྤྲོད་དང་གཅིག་མཚུངས་ཡིན། མཐའ་མའི་གྲུབ་འབྲས་རྒྱུགས་བཞེས་མཁན་སློབ་སོ་སོའི་ཐུགས་ཁོམས་དང་བསྟུན་ཨང་ཐོབ་རྣམས་འཛིན་གྲྭ་སོ་སོའི་སློབ་ཁང་དུ་སྩོལ་བ་བཅས་སོ།།</p>
+                    
+                        
+                    <h2>༄༅། །ལོ་འཁོར་རྒྱུགས་སྤྲོད།</h2>    
+                    <p class="paragraph">
+                        ལོ་འཁོར་ཡིག་རྒྱུགས་གཏོང་བའི་ཆ་རྐྱེན་ངེས་པར་དུ་དགོས་པ་ནི། ལོ་རེའི་ཆོས་ཐུན་བརྒྱ་ཆ་བརྒྱད་ཅུ་ཚང་བ་དང་། སློབ་ཚན་སོ་སོའི་རྩ་བ་བློ་རྒྱུགས་དུས་ཚོད་གཏན་འབེབས་ལྟར་ཕུལ་ཟིན་པ། ལོ་དེར་སྒྲིིག་འགལ་གྱི་ཉེས་པ་མེད་པའམ་བཤགས་ཟིན་པ། ལོ་གསུམ་རིང་མུ་མཐུད་རྒྱུགས་སྤྲོད་ཨང་ཚད་མ་ལོན་པ་མིན་པ་རྣམས་གཙོ་བོ་ཡིན། དྲི་ཤོག་ཁག་འདིར་བཞུགས་དང་ཕྱི་རོལ་གྱི་མཁས་དབང་རྣམས་ལ་བཀོད་བཅུག་ནས། རྒྱུགས་བཞེས་པ་ལྷན་འཛོམས་ཐོག་གསང་རྒྱ་བྱས་ཏེ་པར་སྐྲུན་སྐབས་གསང་བ་འཆོལ་བའི་མཐོང་ཐོས་དོགས་གསུམ་བྱུང་རིགས་སླར་ཡང་གསར་བཀོད་གནང་བ་ཡིན། དུས་ཚིགས་ནི་ལོ་ལྟར་བོད་ཟླ་ ༡༠ ཚེས་ ༢༦ ཉིན་སྔ་དྲོ་ཆུ་ཚོད་ ༧:༡༥ ཐོག་དབུ་འཛུགས་བྱེད། རྒྱུགས་སྤྲོད་མ་བཏང་སྔོན་ཟླ་དེའི་ཚེས་ ༣ ནས་ ༢༥ བར་རང་སྦྱོང་བྱེད་རྒྱུའི་དུས་ཡུན་ཉིན་ཉེར་གསུམ་དང་། རྒྱུགས་ཐེངས་ལྔ་ཡོད་པ་རེ་རེའི་བར་ཉིན་གསུམ་རེར་རང་སྦྱོང་གནང་རྒྱུའི་གོ་སྐབས་ཡོད། རྒྱུགས་དངོས་ཀྱི་དུས་ཡུན་ཆུ་ཚོད་གསུམ་དང་ཞུ་དག་ཆེད་སྐར་མ་བཅོ་ལྔ་ཡིན། དེའི་རིང་ངེས་པར་བྲི་དགོས་པའི་དྲི་ལན་དང་གཞན་རྣམས་གདམ་ངའི་སྒོ་ནས་བྲི་དགོས། ཁྱད་པར་དུ་རྒྱུགས་དངོས་སྐབས་རྒྱུགས་སྤྲོད་ཁང་དུ་སློབ་ཕྲུག་རྣམས་སྡོད་ས་རྒྱང་བཀྱེད་ནས་ཞབས་སྟེགས་ཨང་སྦྱར་བའི་གོ་རིམ་ལྟར་སོ་སོའི་གདན་ལ་འཁོད་རྗེས། འབྲི་ཤོག་མདུན་ངོས་ཀྱི་ས་མིག་རྣམས་སུ། རྒྱུགས་འབུལ་ཡུལ། སོ་སོའི་འཛིན་རིམ། ཉིན་དེའི་རྒྱུགས་ཀྱི་སློབ་ཚན། གཟའ་དང་ཚེས་གྲངས། ཞབས་སྟེགས་ཀྱི་ཨང་རྣམས་བྲི་དགོས། རང་རང་གི་མིང་དང་མིང་གཞུང་ཨང་བྲི་མི་ཆོག དེ་རྗེས་སློབ་ཚན་སོ་སོའི་དྲི་བ་རྣམས་ཞིབ་ཚགས་བཀླག  དྲི་བ་ཁག་གསལ་ཁ་མེད་ཚེ་སྐབས་ཐོབ་ཀྱི་རྒྱུགས་བཞེས་མཁན་སློབ་ལ་བཀའ་འདྲི་ཞུ་བ་ལས། སློབ་ཕྲུག་ཕན་ཚུན་གླེང་མོལ་དང་ཡིག་འབྲེལ་དཔེ་ལྟ་སོགས་བྱེད་པ་དོ་དམ་པས་གཟིགས་རྟོགས་བྱུང་ཚེ་རྒྱུགས་སྤྲོད་ལས་ཕྱིར་འབུད་བྱེད། མཐའ་གྲུབ་རྗེས་འཛིན་གྲྭ་སོ་སོའི་རྒྱུགས་ཤོག་འཇོག་གནས་སུ་སོ་སོར་མ་ནོར་བར་འབུལ། དེ་རྗེས་དོ་དམ་པས་འཛིན་རིམ་སོ་སོའི་རྒྱུགས་ཤོག་རྣམས་མཁས་དབང་རྣམས་ལ་འབུལ་བར་བྱེད། སླར་ཨང་ཐོབ་འབྱོར་ཚེ་དོ་དམ་ལྷན་འཛོམས་ཐོག་གསང་ཞིབ་ཀྱིས་རྒྱུགས་སྤྲོད་ཐེངས་ལྔའི་ཨང་བསྡོམས་གྲུབ་དོན་ཤོག་ལྷེའི་སྟེང་དུ་བཀོད་ནས་བརྒྱ་ཆ་དྲུག་ཅུའི་བར་ཡན་ཆོད་ལོན་པ་དང་། བརྒྱ་ཆ་ལྔ་བཅུ་ནས་དྲུག་ཅུའི་བར་དང་། བརྒྱ་ཆ་ལྔ་བཅུར་མ་ལོངས་པ་བཅས་སྡེ་ཚན་གསུམ་དུ་ཕྱེ། སྤྱིར་རྩ་བའི་སློབ་ཚན་ལ་ཨང་ ༤༠ དང་། ཡན་ལག་སློབ་ཚན་ལ་ཨང་ ༣༥ ལེན་དགོས། ཨང་བཞི་དང་ལྔས་མ་འདངས་ན་བསྐྱར་རྒྱུགས་གཏོང་ཆོག སྡེ་ཚན་དང་པོ་ལས་ཨང་དང་པོ་དང་གཉིས་པ་གསུམ་པ་བཅས་ལ་ཆེས་མཐོའི་རྒྱུན་ལས་མཆོག་ནས་གཟེངས་རྟགས་བསྩལ་ཞིང་འདུས་སྡེ་བྱིངས་ལ་བླང་དོར་གྱི་བཀའ་སློབ་ཟབ་མོ་གནང་ནས་ལོ་གཅིག་གི་ཡིག་རྒྱུགས་ཀྱི་གྲུབ་དོན་མཐའ་བསྡུ་བའོ།། </p>
+
+                        <div>
+                            <div class="back-to-menu-end"><img class="end-red-line"src="images/line_470x10_trans.png"><a href="#mainmenu"><p class="end-talk">ཕྱིར་ལོག</p></a></div>
+                        </div>
+                    
+                        
+                    <h2 id="certificate">༄༅། །མདོ་རྒྱུད་གོང་འོག་གི་ཕྱག་ཁྱེར།</h2>    
+                    <p class="paragraph">
+                        སྔ་འགྱུར་མཐོ་སློབ་ཆེན་མོ་འདི་ནས་རྒྱ་བོད་མཁས་པའི་གཞུང་ལུགས་ལ་སློབ་སྦྱོང་གནང་བའི་དཔང་རྟགས་སུ་ལོ་རེའི་འཛིན་གྲྭ་རྒྱུགས་སྤྲོད་ཀྱི་གྲུབ་འབྲས་གསལ་བའི་ཕྱག་ཁྱེར་རེ་བོད་ཟླ་  ༢ པའི་ཚེས་ ༨ ཉིན་ཆེས་མཐོའི་རྒྱུན་ལས་ཀྱིས་གནང་བཞིན་པ་མ་ཟད། མདོ་གོང་འོག་དག་རྒྱུད་སྡེ་གོང་འོག་རྣམས་ལ་སློབ་སྦྱོང་ཟིན་པའི་རྟགས་སུ་རང་རང་གི་རྒྱུགས་སྤྲོད་ཀྱི་གྲུབ་འབྲས་སོགས་གསལ་བའི་ཕྱག་ཁྱེར་གསུམ་གནང་བཞིན་ཡོད།
+                        དེ་ཡང་སྤྱི་ལོ་  ༡༩༨༣ ཟླ་  ༡ ཚེས་  ༣༡  ཉིན་དགོན་འདིར་མཁས་དབང་ཁག་དང་དགེ་འདུན་མང་ཚོགས་འདུས་པའི་དབུས་སུ། ལྔ་འགྱུར་བསྟན་པའི་དབུ་འཛིན་གཉིས་པ༧སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་མཆོག་གིས་འཛིན་རིམ་བཞི་པ་རྫོགས་ཟིན་པའི་སློབ་ཕྲུག  ༡༤ ལ་མཐའ་བྲལ་སྨྲ་བའི་དབང་ཕྱུག་གི་ཕྱག་ཁྱེར་དགྱེས་བསྩལ་གནང། སླར་ཡང་  ༡༩༨༧ ཟླ་  ༣  ཚེས་  ༥  ཉིན་དགོན་འདིར་རྒྱལ་ཁབ་ཕྱི་ནང་གི་སྐུ་མགྲོན་དང་དགེ་འདུན་མང་ཚོགས་འདུས་པའི་དབུས་སུ། ༧སྐྱབས་རྗེ་དིལ་མགོ་མཁྱེན་བརྩེ་རིན་པོ་ཆེ་མཆོག་གིས་མཛད་སྒོ་དང་འབྲེལ་སློབ་ཐོན་པ   ༦ ལ་ངེས་གསང་ལེགས་བཤད་མཛོད་འཆང་། སློབ་ཕྲུག  ༨ ལ་ཕར་ཕྱིན་རབ་འབྱམས་པ། ༡༤ ལ་མཐའ་བྲལ་སྨྲ་བའི་དབང་ཕྱུག་སྟེ། ཡོངས་བསྡོམས་དགེ་འདུན་པ་  ༢༧  ལ་ཕྱག་ཁྱེར་གནང་ཡོད།
+                        ༡༩༩༢ ཟླ་  ༤ ཚེས་  ༡༠ ཉིན་དགོན་འདིར་ཆོས་སྡེ་ཁག་གི་སྐུ་མགྲོན་དང་དགེ་འདུན་མང་ཚོགས་འདུས་པའི་དབུས་སུ། སྔ་འགྱུར་བསྟན་པའི་དབུ་ཁྲིད་གསུམ་པ་༧སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གིས་སློབ་ཐོན་པ་ ༡༡ ལ་ངེས་གསང་ལེགས་བཤད་མཛོད་འཆང་། སློབ་ཕྲུག་  ༡༧  ལ་ཕར་ཕྱིན་རབ་འབྱམས་པ། ༤༦ ལ་མཐའ་བྲལ་སྨྲ་བའི་དབང་ཕྱུག་སྟེ་ཡོངས་བསྡོམས་དགེ་འདུན་པ་  ༧༤ ལ་ཕྱག་ཁྱེར་གནང་ཡོད། ༡༩༩༩ ཟླ་  ༩  ཚེས་  ༢༥
+                        ཉིན་དགོན་འདིའི་འདུ་ཁང་ཆེན་མོའི་སྒོ་འབྱེད་དང་བསྟུན་ཆོས་སྡེ་ཁག་གི་དབུ་ལས་དང་ཕྱི་ནང་གི་སྐུ་མགྲོན། དགེ་འདུན་སྟོང་ཕྲག་མང་པོའི་དབུས་སུ། ༧གོང་ས་ལྷ་མིའི་རྣམ་འདྲེན་མཆོག་གིས་སློབ་ཐོན་པ  ༤༢ ལ་ངེས་གསང་ལེགས་བཤད་མཛོད་འཆང་དང་། ༧སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གིས་སློབ་ཕྲུག་༡༣༣ ལ་ཕར་ཕྱིན་རབ་འབྱམས་པ། ༢༡༨ ལ་མཐའ་བྲལ་སྨྲ་བའི་དབང་ཕྱུག་སྟེ་ཡོངས་བསྡོམས་དགེ་འདུན་པ་  ༣༩༣ ལ་ཕྱག་ཁྱེར་གནང་ཡོད།
+                        ༢༠༠༣  ཟླ  ༤  ཚེས་  ༡༣ ཉིན་དགོན་འདིར་ཆོས་ལུགས་བཞིའི་མཁས་དབང་ཁག་དང་། རྒྱལ་ཁབ་ཕྱི་ནང་གི་སྐུ་ཚབ། དགེ་འདུན་མང་ཚོགས་འདུས་པའི་དབུས་སུ་སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེ་མཆོག་གིས་སློབ་ཐོན་པ་  ༡༡༦  ལ་ངེས་གསང་ལེགས་བཤད་མཛོད་འཆང་། སློབ་ཕྲུག་ ༡༧༡ ་ལ་ཕར་ཕྱིན་རབ་འབྱམས་པ། ༢༠༥ ལ་མཐའ་བྲལ་སྨྲ་བའི་དབང་ཕྱུག་སྟེ་ཡོངས་བསྡོམས་དགེ་འདུན་པ་ ༤༩༢  ལ་ཕྱག་ཁྱེར་གནང་ཡོད།</p>
+                    
+                        
+                        <h2>༄༅། །མཁན་པོའི་ཕྱག་ཁྱེར།</h2> <br><br>
+                        <div class="khenpo-batch-flex">
+                          <div class="pic-name">
+                            <img class="khenpo-batch"src="images/khenpos_group1.jpg">
+                            <p>རྣམ་གླིང་མཁན་ཐོག་དང་པོ་རྣམས་ཀྱི་མཁན་རིན་པོ་ཆེ་རྣམས་ཀྱི་སྐུ་པར།</p>
+                          </div>
+                          <p class="paragraph">
+                          
+                            དེ་ཡང་མཐོ་སློབ་འདིར་ཞུགས་ཏེ་འཛིན་གྲྭ་དགུའི་རིང་རྒྱ་བོད་མཁས་པའི་གཞུང་ལ་ཐོས་བསམ་མཐར་ཕྱིན་གནང་ནས་འཛིན་གྲྭ་རྫོགས་རྗེས། བསླབ་སྡོམ་དག་ཅིང་ལོ་མང་པོར་སློབ་ཁྲིད་གནང་བ་སོགས་ཉམས་མྱོང་ལེགས་པར་བསགས་པ་ཙམ་དུ་མ་ཟད། ཆོས་རྒྱལ་དྲི་མ་མེད་པའི་མདོ་ལས། ཚུལ་གནས་ཐོས་དང་ཏིང་འཛིན་གྱིས། །ལུས་གཙང་སྨྲ་མཁས་སེམས་མི་གཡོ། །སེམས་ཅན་ཀུན་ལ་བྱམས་སེམས་ལྡན། །དེ་འདྲ་བཤེས་གཉེན་དམ་པར་མཛད། །ཅེས་པ་ལྟར་གཞི་ཚུལ་ཁྲིམས་རྣམ་པར་དག་པས་ལུས་གཙང་། གཞུང་ལུགས་རབ་འབྱམས་ལ་ཐོས་བསམ་མཐར་ཕྱིན་མཛད་ཅིང་ཐོས་དོན་འཆད་པ་ལ་སྨྲ་མཁས་ལྡན་པ། ཞི་ལྷག་གི་ཏིང་ངེ་འཛིན་ལ་སྦྱངས་པ་གང་འཚམས་ཤིག་དང་ལྡན་པས་སེམས་མི་གཡོ་བ། དེ་བཞིན་དུ་སེམས་ཅན་ལ་བྱམས་སེམས་ཅན་ཏེ་ཡོན་ཏན་བཞི་དང་ལྡན་པ་ཞིག་ལ་མཁན་པོོའི་མཚན་གནས་སམ་མདོ་རྒྱུད་ངེས་དོན་བསྟན་པའི་སྣང་བྱེད་ཅེས་པའི་ཕྱག་ཁྱེར་འབུལ་བཞིན་ཡོད།
+                            དེ་ཡང་སྤྱི་ལོ་  ༡༩༨༩ ཟླ་   ༤  ཚེས་ ༢༠ ཉིན་༧སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་མཆོག་གིས་འདི་ནས་སྦྱངས་པ་མཐར་སོན་པ་འཇམ་དབྱངས་ཚེ་རིང་། དབང་ཕྱུག་བསོད་ནམས། བཀྲ་ཤིས་ཚེ་རིང་། ཚེ་རིང་རྡོ་རྗེ། འཇིགས་མེད་སྐལ་བཟང་སྟེ་ལྔ་ལ་མདོ་རྒྱུད་ངེས་དོན་བསྟན་པའི་སྣང་བྱེད་ཅེས་པའི་ཕྱག་ཁྱེར་གནང་།</p>
+
+
+                        </div>  
+ 
+                        
+                          
+                        
+
+                            <br><br>
+                            <div class="khenpo-batch-flex">
+                              <div class="pic-name">
+                                <img class="khenpo-batch"src="images/khenpos_group2.jpg">
+                                <p>རྣམ་གླིང་མཁན་ཐོག་གཉིས་པའི་མཁན་རིན་པོ་ཆེ་རྣམས་ཀྱི་སྐུ་པར།</p>
+                              </div>
+                            
+                            <p class="paragraph">
+                            
+                            ༡༩༩༥ ཟླ  ༡  ཚེས་  ༡༠ ཉིན༧སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གིས་འདི་ནས་སྦྱངས་པ་མཐར་སོན་པ་རྡོ་རྗེ་དཔལ་བཟང་། དཀོན་མཆོག་བསྟན་འཛིན། པདྨ་ཆོས་འཕེལ། ཀུན་བཟང་བདེ་ཆེན། དཔལ་ལྡན་གྲུབ་པ། སངས་རྒྱས་རང་བྱུང་། སྐལ་ལྡན་ཐར་པ། རྡོ་རྗེ་ཚེ་རིང་སྟེ་དགུ་ལ་མདོ་རྒྱུད་ངེས་དོན་བསྟན་པའི་སྣང་བྱེད་ཅེས་པའི་མཚན་གནས་གནང་།།</p>
+
+
+                            </div>
+                            
+                          
+
+                            
+                            <div class="khenpo-batch-flex">
+                              <div class="pic-name">
+                                <img class="khenpo-batch"src="images/khenpos_group3.jpg">
+                                <p>རྣམ་གླིང་མཁན་ཐོག་གསུམ་པའི་མཁན་རིན་པོ་ཆེ་རྣམས་ཀྱི་སྐུ་པར།</p>
+                              </div>
+                              <p class="paragraph">
+                                ༡༩༩༩  ཟླ ཚེས་  ༢༩ ཉིན་༧སྐྱབས་རྗེ་གྲུབ་དབང་པདྨ་ནོར་བུ་རིན་པོ་ཆེ་མཆོག་གིས་འདི་ནས་སྦྱངས་པ་མཐར་སོན་པ་གྱང་ཁང་སྤྲུལ་སྐུ་རིན་པོ་ཆེ། ཚེ་དབང་བསོད་ནམས་། སངས་རྒྱས་དབང་འདུས། ཀརྨ་དབང་རྒྱལ། སྐལ་བཟང་ཉི་མ། བསྟན་འཛིན་ནོར་རྒྱས། རྟ་མགྲིན་སྲི་ཐུབ། འགྱུར་མེད་ཀུན་བཟང་བསྟན་འཛིན། ཨོ་རྒྱན། བཤད་སྒྲུབ་ཉི་མ་སྟེ་བཅུ་ལ་མདོ་རྒྱུད་ངེས་དོན་བསྟན་པའི་སྣང་བྱེད་ཅེས་པའི་མཚན་གནས་བསྩལ།
+                              </p>
+                              
+                            </div>
+                            
+                         
+                              <br><br>
+                              <h2 id="teacheraid">༄༅། །སྐྱོར་དཔོན་གྱི་སྐོར།</h2>
+                              <p class="paragraph">
+                               
+                                ༄༅། །སྐྱོར་དཔོན་གྱི་སྐོར།
+                                  སྤྱིར་བཏང་སྐྱོར་དཔོན་ནི་མཁན་སློབ་དགེ་བའི་བཤེས་གཉེན་རྣམ་པས་སློབ་ཁྲིད་གནང་ཚར་བའི་གཞུང་ལུགས་དེ་ཉིད་བསྐྱར་དུ་སློབ་གཉེར་གསར་བུ་བ་རྣམས་ལ་ཁྲིད་མཁན་གྱི་དགེ་རྒན་ཞིག་ཡིནལ། སྔ་འགྱུར་མཐོ་སློབ་འདི་ལྟ་བུར་མཚོན་ན་སྐྱོར་དཔོན་ཁག་སློབ་ཕྲུག་གི་ནང་ལོ་རིམ་བརྒྱད་པ་ཡན་ནས་བསྐོ་བཞག་གནང་བ་ལས། འདི་ནས་སྦྱངས་པ་མཐར་སོན་པའིམཁན་སློབ་རྣམས་སྐྱོར་དཔོན་དུ་བསྐོ་སྲོལ་མེད། སྔོན་བསྐོས་ཟིན་པའི་སྐྱོར་དཔོན་ཁག་འཛིན་གྲྭ་ཐོན་རྗེས་སྐྱོར་དཔོན་གསར་པ་ཁག་བསྐོ་བཞིན་ཡོད། དེ་ཡང་ལོ་ལྟར་དཔེ་ཁྲིད་དབུ་མ་བཙུགས་པའི་སྔོན་ནས་རྒྱུན་ལས་མཁན་སློབ་ཚང་འཛོམས་ཐོག་སློབ་ཕྲུག་རྣམས་ལས་ཤེས་ཚད་སོགས་ཕྱོགསས་གང་ཐད་ནས་སྐྱོར་དཔོན་གྱི་འོལ་ཆོས་ཚང་རིགས་ལ་མཁན་སློབ་རྣམས་ཀྱིས་མང་མོས་འོས་བསྡུ་ལམ་ནས་སྐྱོར་དཔོན་དུ་གསར་བསྐོ་གནང་བཞིན་ཡོད།། །།
+
+
+                              </p>
+                      
+
+     
+    
+     
+
+              
+        </div>
+
+
+        
+
+       
+
+     
+
+
+      
+        <div>
+            <div class="back-to-menu-end"><img class="end-red-line"src="images/line_470x10_trans.png"><a href="#mainmenu"><p class="end-talk">ཕྱིར་ལོག</p><img src="images/idea_ending_fluorish320.gif"></a></div>
+        </div>
+
+    </div>
+    
+
+
+    
+      
+    
+    <script>
+      const hameburger = document.querySelector(".hameburger");
+      const navBar = document.querySelector(".navbar");
+
+      hameburger.addEventListener("click", () => {
+        hameburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+      })
+
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hameburger.classList.remove("active");
+        navBar.classList.remove("active");
+      }))
+    </script>
+      
+  </body>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.namdrolingshedra.org</title>
+	
+	
+																		<style>  
+																		body{
+																		 margin:0 auto;
+																		 min-width:352px;
+																		}
+																		*{
+																		  margin:0;
+																		  padding:0;
+																		}
+																		.banner-img-container{
+																		  display:flex;
+																		}
+																		.top-banner{
+																		  margin:0 auto;
+																		  width:100%;
+																		  margin-bottom:20px;
+																		}
+																		.backdrop-container{
+																		  display:none;
+																		}
+																		.menubar{
+																		  display:flex;
+																		  flex-wrap:wrap;
+																		  list-style:none;
+																		  align-items:space-between;
+																		  display:none;
+																		  font-size:25px;
+																		  font-weight:bold;
+																		}
+																		
+																		.red-bar-image{
+																		  width:100%;
+																		  margin-bottom:20px;
+																		  display:none;
+																		}
+
+
+
+																		.search-box{
+																		  display:flex;
+																		  flex-direction:column;
+																		  align-items:center;
+																		}
+																		.search{
+																		  width:220px;
+																		  outline:none;
+																		  border-style:solid;
+																		}
+																		.search::placeholder{
+																		  font-size:10px;
+																		}
+																		.name{
+																		  outline:none;
+																		}
+																		.author{
+																		  outline:none;
+																		}
+																		.boxes{
+																		  margin-top:20px;
+																		}
+																		input{
+																		  border-radius:5px;
+																		  border-style:solid;
+																		  border-width:1px;
+																		}
+																		.bakas{
+																		  
+																		  background-color:rgb(105, 6, 36);
+																		  border-style:solid;
+																		  border:1px;
+																		  border-radius:5px;
+																		  color:white;
+																		  padding:10px;
+																		  box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+																		  transition: background-color 0.8s;
+																		}
+																		.bakas:hover{
+																		  background-color:yellow;
+																		  color:brown;
+																		  cursor:pointer;
+
+																		}
+																		.bakas:active{
+																		  background-color:brown;
+																		  color:white;
+																		  cursor:progress;
+																		}
+																		input::placeholder{
+																		  padding-left:10px;
+																		}
+
+
+																		.rinpoche-notebook{
+																		  display:flex;
+																		  flex-wrap:wrap;
+																		  flex-direction:column;
+																		  align-items:center;
+																		  margin-top:20px;
+																		  
+
+																		}
+																		p{
+																		  font-size:20px;
+																		  line-height:60px;
+																		  color:rgb(28, 23, 23);
+																		}
+																		.flex-1280{
+																		  display:none;
+																		}
+																		.sub-flex{
+																		  margin:0 auto;
+																		  display:flex;
+																		  flex-direction:column;
+																		  
+
+																		}
+																		.sub-sub-flex1{
+																		  font-weight:bold;
+																		}
+																		.sub-sub-flex2{     
+																		  font-weight:bold;         
+																		}
+																		.sub-sub-flex1 p{
+																		  margin-top:20px;
+																		}
+																		.sub-sub-flex2 p{
+																		  margin-top:20px;
+																		}
+																		.sub-flex a{
+																		  text-decoration:none;
+																		}
+																		.sub-flex a p:hover{
+																		  color:rgb(218, 218, 90);
+																		}
+
+
+
+																		.facebook-count{
+																		  display:flex;
+																		  margin-top:40px;
+																		  justify-content:center;
+																		 
+																		}
+																		.face{
+																		  margin-left:100px;
+																		}
+																		.count{
+																		  margin-right:100px;
+																		}
+																		 
+																		
+																		.facebook-icon{
+																		  height:20px;
+																		}
+
+																		.paragraph-photo{
+																		  padding:30px; 
+																		  display:flex; 
+																		  flex-direction:column;
+																		}
+																		.paragraph-text{
+																		  text-align:center;
+																		}
+																		.main-temple{
+																		  padding-top:20px;
+																		  padding-bottom:20px;
+																		  margin:0 auto;
+																		  width:300px;
+																		}
+																	   
+
+
+
+																		.end-banner-container{
+																		  display:flex;
+																		  flex-grow:none;
+																		  
+																		}
+																		.end-banner{
+																		  margin: 0 auto;
+																		  
+																		}
+
+
+
+																		
+																		li{
+																		  list-style:none;
+																		}
+																		a{
+																		  text-decoration:none;
+																		}
+																	   
+																	   
+																		.hameburger{
+																		  position:fixed;
+																		  top:50px;
+																		  right:0;
+																		  background-color:rgb(77, 10, 10);
+																		  padding:10px;
+																		  border-radius:4px;
+
+																		}
+																		
+																		.hameburger.active .bar:nth-child(2){
+																		  opacity:0;  
+																		}
+																		.hameburger.active .bar:nth-child(1){
+																		  transform: translateY(10px) rotate(45deg);
+																		}
+																		.hameburger.active .bar:nth-child(3){
+																		  transform: translateY(-8px) rotate(-45deg);
+																		}
+																	  
+																		.navbar{
+																		  position:fixed;
+																		  top:0;
+																		  left:-100%;
+																		}
+																		.nav-menu{
+																		  background-color:rgb(121, 37, 37);
+																		  height:100vh;
+																		  width:400px;
+																		  display:flex;
+																		  flex-direction:column;
+																		  align-items:center;
+																		  gap:45px;
+																		  top:30px; 
+																		}
+
+																		.navbar.active{
+																		  left:0;
+
+																		}
+						
+																		.bar{
+																		  display:block;
+																		  width:30px;
+																		  height:4px;
+																		  margin:5px auto;
+																			-webkit-transition:all 0.3s ease-in-out;
+																			transition:all 0.3s ease-in-out;
+																			background-color:rgb(255, 255, 255);
+
+
+																		}
+																		.main-menu ul li a{
+																			color:brown;	
+																		}
+																		.main-menu ul li a:hover{
+																			color:rgb(219, 221, 112);
+																		}
+																		nav ul li a{
+																					font-size:40px;
+																					color:white;
+																					margin-top:40px;
+																		}
+																		nav ul li a:hover{
+																					color:yellow;
+																		}
+																		
+																		
+
+																		
+																		
+
+																		/* now time for slide show BHAWWMM!!!!*/
+																		.content{
+																			  width:360px;
+																			  margin:0 auto;
+																			  height:200px;
+																			  display:flex;
+																			  
+																			  justify-content:center;
+																			  background-image:url(../NNI_homepage_practice/images/slide_01.jpg);
+																			  background-size:cover;
+																			  background-position:center;
+																			  background-repeat:no-repeat;
+																			  transition:5s;
+																			  animation-name:animate;
+																			  animation-direction:alternate-reverse;
+																			  animation-play-state:running;
+																			  animation-timing-function:ease-in-out;
+																			  animation-duration:30s;
+																			  animation-fill-mode:forwards;
+																			  animation-iteration-count:infinite;
+																			}
+																			@keyframes animate{
+																			  0%{
+																				background-image:url(../NNI_homepage_practice/images/slide_02.jpg);
+																			  }
+																			  20%{
+																				background-image:url(../NNI_homepage_practice/images/slide_03.jpg);
+																			  }
+																			  40%{
+																				background-image:url(../NNI_homepage_practice/images/slide_04.jpg);
+																			  }
+																			  60%{
+																				background-image:url(../NNI_homepage_practice/images/slide_05.jpg);
+																			  }
+																			  80%{
+																				background-image:url(../NNI_homepage_practice/images/slide_06.jpg);
+																			  }
+																			  100%{
+																				background-image:url(../NNI_homepage_practice/images/slide_07.jpg);
+																			  }
+																			  
+																			}
+																			@media only screen and ( min-width:768px){
+																			  .menubar{
+																				display:block;
+																				display:flex;
+																				flex-wrap:wrap;
+																				list-style:none;
+																				align-items:space-between;
+																				column-gap:20px;
+																				
+																			  }
+																			  .nav-menu{
+																				display:none;
+
+																			  }
+																			  .hameburger{
+																				display:none;
+																			  }
+																			  .content{
+																				height:400px;
+																				width:500px;
+																				margin-top:50px;
+																				margin-bottom:50px;
+																			  }
+																			 
+																			  .main-menu{
+																				max-width:1000px;
+																				margin:0 auto;
+																			  }
+																			  .red-bar-image{
+																				display:block;
+																				max-width:790px;
+																				margin:0 auto;
+																			  }
+																			  .menubar li{
+																				margin:0 auto;
+																				padding:1%;
+																				color:brown;
+
+																			  }
+																			  .menubar li:hover{
+																				color:yellow;
+																				cursor:pointer;
+																			  }
+																			  .menubar li:active{
+																				color:brown;
+																				cursor:progress;
+																			  }
+																			  .sub-flex{
+																				margin:0 auto;
+																				display:flex;
+																				flex-direction:row;
+																				column-gap: 20px;
+																			  }
+																			  .backdrop-container{
+																				display:block;
+																				max-width:1000px;
+																				margin:0 auto;
+																			  }
+																			  .backdrop-image{
+																				width:100%;
+																			  }
+																			  .top-banner{
+																				display:none;
+																			  }
+																			  .main-temple{
+																				height:400px;
+																				width:700px;
+																			  }
+																			  .all-paragraph-container{
+																				max-width:1000px;
+																				margin:0 auto;
+																			  }
+
+																			  
+
+																			}
+
+																			@media only screen and (min-width:1280px){
+																			  body{
+																				max-width:1000px;
+																			  }
+																			  .main-menu{
+																				font-size:25px;
+																				font-weight:bold;
+																			  }
+																			  .flex-mobile-ipad{
+																				display:none;
+																			  }
+																			  .flex-1280{
+																				display:flex;
+																				justify-content:center;
+																				align-items:center;
+																				row-gap:12px;
+																				column-gap:80px;
+																				margin-top:50px;
+																				margin-bottom:50px;
+																				max-width:1000px;
+																				margin: 0 auto;
+																			  
+																			  }
+																			  .rinpoche-notebook{
+																				margin-top:50px;
+																				
+																			  }
+																			  .red-bar-image{
+																				margin-bottom:50px;
+																			  }
+																			  .search-box{
+																				margin-left:auto;
+																				width:400px;
+																			  }
+																			  .content{
+																				margin:0;
+																				padding:0;
+																			  }
+																			  .main-temple{
+																				width:900px;
+																				height:700px;
+																			  }
+																			  .paragraph-text{
+																				font-size:25px;
+																			  }
+																			  p{
+																				font-size:25px;
+																			  }
+																			  .boxes {
+																				font-size:25px;
+																			  }
+																			  .bakas  {
+																				font-size:25px;
+																			  }
+																			  input{
+																				height:30px;
+																			  }
+																			  
+																			}
+																		</style>
+																		
+																		
+  </head>
+  <body alink="green">
+    <div class="body-container">
+      <div class="header"></div>
+        <nav class="navbar">
+					<ul class="nav-menu">
+						<li class="nav-item"><a href="index.html" >མདུན་ངོས།</a></li> 
+						<li class="nav-item"><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+						<li class="nav-item"><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+						<li class="nav-item"><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+						<li class="nav-item"><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུནལས།</a></li>
+						<li class="nav-item"><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+						<li class="nav-item"><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+						<li class="nav-item"><a href="teachers.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+						<li class="nav-item"><a href="teachers.html">སློབ་དཔོན་རྣམས།</a></li>
+						<li class="nav-item"><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+						<li class="nav-item"><a href="gallary.html">བརྙན་པར།</a></li>
+						<li class="nav-item"><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+						<li class="nav-item"><a href="library">ཆོས་མཛོད།</a></li>
+					</ul>
+        </nav>
+        <div class="hameburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <div id="mainmenu" class="banner-img-container">
+        
+          <img  class="top-banner"src="images/backdrop_480_9.png">
+      </div>
+      <div class="backdrop-container">
+        <img class="backdrop-image"src="images/backdrop_default13.png">
+      </div>
+      <div class="main-menu">
+        <ul class="menubar">
+					<li><a href="index.html">མདུན་ངོས།</a></li> 
+					<li><a href="history.html">སྔ་འགྱུར་བྱུང་ཚུལ།</a></li>
+					<li><a href="penor_rinpoche.html">སྐྱབས་རྗེ་རིན་པོ་ཆེ།</a></li>
+					<li><a href="administration.html">འཛིན་སྐྱོང་སྡེ་མཚན།</a></li>
+					<li><a href="higher_admin.html">ཆེས་མཐོའི་རྒྱུན་ལས།</a></li>
+					<li><a href="curriculum.html">བཤད་གྲྭའི་སློབ་ཚན།</a></li>
+					<li><a href="teachers.html">དགེ་བའི་བཤེས་གཉེན།</a></li>
+					<li><a href="nni_graduate.html">མཁན་ཐོག་རིམ་བྱོན།</a></li>
+					<li><a href="nni_graduate.html">སློབ་དཔོན་རྣམས།</a></li>
+					<li><a href="important_activities.html">མཛད་རིམ་ཆེ་བ་ཁག</a></li>
+					<li><a href="gallary.html">བརྙན་པར།</a></li>
+					<li><a href="contact.html">འབྲེལ་གཏུགས།</a></li>
+					<li><a href="library.html">ཆོས་མཛོད།</a></li>
+				</ul>
+      </div>
+      <div class="red-bar-below-menu">
+        <img class="red-bar-image"src="images/line_470x10_trans.png">
+
+      </div>
+      <div class="flex-1280">
+          <div class="content">
+                
+
+          </div>
+        
+          <div class="search-box">
+                  <div class="boxes">
+                      <a>མཚན་བྱང་།</a>  <input class="name" type="text" placeholder="Name of book">
+                  </div>
+                  <div class="boxes">
+                    <a>མཛད་པ་པོ།</a>   <input class="author" type="text" placeholder="Author">
+                  </div>
+                  <div class="boxes">
+                    <input class="search" type="text" placeholder="Search">
+                  </div>
+                  <div class="boxes">
+                    <button class="bakas">འཚོལ།</button>
+                  </div>
+          </div>
+      </div>
+
+
+      <div class="flex-mobile-ipad">
+          <div class="content">
+                        
+
+          </div>
+          <div class="search-box">
+              <div class="boxes">
+                  <a>མཚན་བྱང་།</a>  <input class="name" type="text" placeholder="Name of book">
+              </div>
+              <div class="boxes">
+                <a>མཛད་པ་པོ།</a>   <input class="author" type="text" placeholder="Author">
+              </div>
+              <div class="boxes">
+                <input class="search" type="text" placeholder="Search">
+              </div>
+              <div class="boxes">
+                <button class="bakas">འཚོལ།</button>
+              </div>
+            </div>
+      </div>
+      
+      
+      
+      <div class="rinpoche-notebook">
+          <div>
+            <p>འདི་ནས་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་གསུང་ཕབ་ལེན་བྱེད་ཐུབ།</p>
+          </div>
+          <div class="sub-flex">
+            <div class="sub-sub-flex1">
+              <a href="http://namdrolingshedra.org/pdf/HHPR1.pdf"><p>བླང་དོར་གསལ་བའི་མེ་ལོང་། དེབ་དང་པོ།</p></a>
+              <a href="http://namdrolingshedra.org/pdf/HHPR2.pdf"><p>བླང་དོར་གསལ་བའི་མེ་ལོང་། དེབ་གཉིས་པ།</p></a>
+            </div>
+            <div class="sub-sub-flex2">
+              <a href="http://namdrolingshedra.org/pdf/HHPR3.pdf"><p>བླང་དོར་གསལ་བའི་མེ་ལོང་། དེབ་གསུམ་པ།</p></a>
+              <a href="http://namdrolingshedra.org/pdf/HHPR4.pdf"><p>བླང་དོར་གསལ་བའི་མེ་ལོང་། དེབ་བཞི་པ།</p></a>
+            </div>
+            
+          </div>
+          
+      </div>
+      <div class="facebook-count">
+          <div class="count">
+            བཀླག་གྲངས། <span style="color:brown;">67861</span>
+          </div>
+          <div class="face">
+            <a href="https://www.facebook.com/NNInstitute/">ངོ་དེབ། <img class="facebook-icon"src="images/facebook2.png"></a>
+          </div>
+      </div>
+
+
+      <div class="all-paragraph-container">
+          <div class="paragraph-photo">
+            <p class="paragraph-text">
+                            <span>༄༅།།སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་གི་ངོ་སྤྲོད།</span><br>
+                    ཐེག་མཆོག་རྣམ་གྲོལ་བཤད་སྒྲུབ་དར་རྒྱས་གླིང་ནི་༸སྐྱབས་རྗེ་གྲུབ་དབང་ཡིད་བཞིན་ནོར་བུས་སྤྱི་ལོ་ ༡༩༦༣ བོད་ཟླ་ ༦ པའི་ཚེས་ ༡༠ ཉིན་གསར་དུ་རྒྱ་གར་ལྷོ་ཕྱོགས་སུ་ཕྱག་བཏབ། སྔ་འགྱུར་བའི་གདན་ས་འདི་ལ་གཞི་རིམ་སློབ་གྲྭ་འཛིན་རིམ་བརྒྱད་ཅན་ཡེ་ཤེས་འོད་གསལ་ཤེས་རབ་རལ་གྲི་གླིང་དང་། སྔ་འགྱུར་སྒྲུབ་སྡེ་བསམ་གཏན་འོད་གསལ་གླིང་དང་། བསམ་གཏན་དགའ་བའི་གླིང་། མཚོ་རྒྱལ་བཤད་སྒྲུབ་དར་རྒྱས་གླིང་། མཐོང་བ་བརྒྱུད་པའི་ཕྱག་བཞེས་འཛིན་ས་གྲྭ་ཚང་དང་། འཕགས་བོད་ཀྱི་པཎ་གྲུབ་རྣམས་ཀྱི་གཞུང་ལ་འཆད་ཉན་གནང་ས་སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་སོགས་ལས་གྲུབ་པའི་ཆོས་སྡེ་ཆེན་པོ་ཞིག་གོ།
+            </p>
+            <img class="main-temple"src="images/gardens_main_temple.jpg">
+            <p class="paragraph-text">
+                                སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་འདི་ནི་༸སྐྱབས་རྗེ་རིན་པོ་ཆེས་སྤྱི་ལོ་ ༡༩༧༨ ཟླ་ ༢ ཚེས་ ༡༧ བོད་རྒྱལ་ལོ་ ༢༡༠༥ ཟླ་བ་ ༡ པོའི་ཚེས་ ༡༠ ཉིན་གསར་དུ་དབུ་བཙུགས་གནང་། མཐོ་སློབ་འདི་ལ་ལོ་རིམ་སོ་སོའི་ཚོགས་ཁང་དང་། དགེ་རྒན་གྱི་ལས་ཤག་དང་སློབ་གཉེར་བའི་བཞུགས་ཤག་དང་། རྒྱུན་ལས་ཡིག་ཚང་། རུང་ཁང་དང་འདུས་པ་བྱིངས་ཀྱི་ཚོགས་ཁང་དང་གཙུག་ལག་ཁང་། ཆོས་མཛོད་ཁང་། སྔ་འགྱུར་རིག་མཛོད་རྩོམ་སྒྲིག་ཁང་། རིག་མཛོད་རྩིས་འཕྲུལ་སྡེ་ཚན། རྒྱལ་ཡོངས་རྙིང་མའི་ཚིག་མཛོད་སྡེ་ཚན། དཔལ་ཡུལ་ཚིག་མཛོད་རྩོམ་སྒྲིག སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་སྡེ་ཚན། པདྨ་མ་ཎི་སྒྲ་བསྒྱུར་སྡེ་ཚན། ཕྱག་དཔེ་བླུ་ཡོན་ཁང་། ཞི་འཚོའི་ཇ་ཁང་དང་ཚོང་ཁང་ཅི་རིགས་ཡོད།
+
+                        དེའང་བཤད་གྲྭ་འདི་ལྟ་བུ་བཙུགས་དགོས་པའི་དམིགས་ཡུལ་ནི།
+
+                        ༸སྐྱབས་རྗེ་རིན་པོ་ཆེའི་ཞལ་ནས།   རྣམ་གྲོལ་གླིང་གི་དགོན་པ་བརྒྱབ་ནས་བཤད་གྲྭ་འདི་བཙུགས་ཡ་དེ་སངས་རྒྱས་བསྟན་པ་སྤྱི་དང་། ཁྱད་པར་སྔ་འགྱུར་རྙིང་མ་བའི་བསྟན་པ་དེ་བོད་ལ་ཆག་ཉམས་ཆེན་པོ་ཞིག་འགྲོ་ཚར་དུས། བསྟན་པ་དེ་གོང་འཕེལ་དུ་ཡོང་ཨེ་ཐུབ་བསམ་ནས། ཐོག་མར་ཁང་པའི་རྨང་བཞག་པའི་སྐབས་སུ་དེའི་བསམ་མནོ་བཏང་ནས་ལོ་གྲངས་ག་ཚོད་ལ་དཀའ་ངལ་བརྒྱབ་ཡོད་རེད། ཁྱེད་རང་རྣམས་ཀྱིས་མཁྱེན་བཞིན་པ་རེད། ཡིན་ནའང་ད་ལྟ་རང་གི་བསམ་པ་དང་མཐུན་པ་འདྲ་པོ་ཞིག་བྱུང་སོང་། ཞེས་སོ།།
+
+                        གཞན་ཡང་༸སྐྱབས་རྗེ་གྲུབ་དབང་རིན་པོ་ཆེའི་ཞལ་ནས།
+
+                        རྣམ་གྲོལ་གླིང་ལ་གཙོ་བོ་བཤད་གྲྭ་བཙུགས་ནས་ལོ་མང་པོ་སོང་ཡོད་རེད། དེ་ལ་བརྟེན་ནས་མཁས་པ་མང་པོ་ཐོན་གྱི་ཡོད། མཁས་དབང་དེ་ཚོས་བསྟན་པར་འཆད་སྤེལ་རྒྱ་ཆེར་མཛད་པ་དང་། རྙིང་མའི་བཤད་གྲྭ་བཙུགས་ཐུབ་ཚད་ཕལ་ཆེར་ལ་དགེ་རྒན་འདྲ་བཏང་ནས། དེ་འདྲ་ཞིག་གི་སྒོ་ནས་རྙིང་མའི་བསྟན་པ་ལ་ཞབས་ཕྱི་ཕྲན་བུ་རེ་འབྱོར་ཡོད་བསམ་གྱི་ཡོད། ཅེས་གསུངས་པ་ལྟར་བཤད་གྲྭ་འདི་ནས་འདི་ལོ་སྤྱི་ལོ་ ༢༠༡༩ ལོའི་བར་སློབ་མ་ ༣༢༧༧ གྱིས་སློབ་སྦྱོང་གི་གོ་སྐབས་དང་མཁན་པོ་ ༣༦༣ དང་།
+
+                        སྤྱི་ལོ་༢༠༢༡ ལོའི་བར་སློབ་དཔོན་ངེས་གསང་ལེགས་བཤད་མཛོད་འཆང་བཞེས་མཁན་ ༡༢༣༢ ཙམ་བསླབ་པ་མཐར་སོན་ནས་བོད་དང་རྒྱ་གར་འབྲུག་བལ་ཡུལ་ཕྱི་རྒྱལ་སོགས་ཡུལ་གྲུ་དུ་མར་བསྟན་འགྲོའི་དོན་ལ་རང་རང་སོ་སོས་ནུས་ཚོད་དང་མཐུན་པའི་བྱ་བ་བྱས་དང་བྱེད་བཞིན་པའོ།།
+
+                        ༸སྐྱབས་རྗེ་གྲུབ་དབང་ཡིད་བཞིན་ནོར་བུའི་ཐུགས་དགོངས་དང་མཐུན་པར་གཙོ་བོ་མཁན་ཆེན་རྣམ་གསུམ་དང་མཆོག་གི་སྤྲུལ་སྐུ་རྣམ་གསུམ། གཞན་ཡང་མཁན་སློབ་རྣམས་ཀྱི་ལྷག་བསམ་ལ་བརྟེན་ནས་མཐོ་སློབ་འདི་དར་རྒྱས་སུ་འགྲོ་བཞིན་པ་དང་། སྔར་སྲོལ་ལྟར་སྤྱི་ལོ་ ༢༠༢༡ ལོའི་ནང་ལའང་མཁན་སློབ་གྲངས་ཞེ་གཉིས་ཀྱིས་དཔེ་ཁྲིད་དང་འཛིན་སྐྱོང་གནང་བཞིན་ཡོད།
+
+                        མཐོ་སློབ་འདིར་འཛིན་རིམ་དགུ་ཡོད་ལ་དེ་དག་ནང་སྤྱི་ལོ་ ༢༠༢༡ ལོའི་ནང་སློབ་སྦྱོང་བྱེད་བཞིན་པའི་སློབ་ཕྲུག་སྤྲུལ་སྐུ་དང་དགེ་འདུན་པ་ཆིག་སྟོང་ལྷག་ཙམ་དང་དགེ་རྒན་བཞི་བཅུ་ཞེ་གཉིས་རྣམས་ཀྱིས་རྒྱལ་བའི་བསྟན་པ་སྤྱི་དང་བྱེ་བྲག་སྔ་འགྱུར་བའི་བསྟན་པ་དྲི་མ་མེད་པ་འཇིག་རྟེན་གྱི་ཁམས་འདིར་ཡུན་ནས་ཡུན་དུ་གནས་པ་དང་སྐྱེ་འགྲོ་རྣམས་ཀྱི་བདེ་སྐྱིད་ཀྱི་ཆེད་དུ་དམིགས་ནས་འཆད་ཉན་ལ་འབད་བརྩོན་གནང་བཞིན་པ་ལགས་སོ།། །།
+                        <br><br>
+                འཇིགས་བྲལ་སྔ་འགྱུར་བསྟན་པའི་རྒྱལ་མཚན་བསྒྲེངས།།<br>ལུང་རྟོགས་ཆོས་ཀྱི་རྒྱལ་རྔ་ཕྱོགས་ཀུན་བསྒྲགས།།<br>
+                རིགས་ལམ་སེངྒེའི་ང་རོས་ས་གསུམ་ཁྱབ།།<br>
+                མཚུངས་མེད་དགེ་མཚན་སྣང་བ་རྒྱས་གྱུར་ཅིག།།
+
+                      
+            </p>
+            
+            
+
+          </div>
+          <div class="end-banner-container">
+            <a class="end-banner"href="#mainmenu"><img src="images/ending_page_fluorish_cr1.png"></a>
+          </div>
+        
+        </div>
+      </div>  
+    
+    <script>
+      const hameburger = document.querySelector(".hameburger");
+      const navBar = document.querySelector(".navbar");
+
+      hameburger.addEventListener("click", () => {
+        hameburger.classList.toggle("active");
+        navBar.classList.toggle("active");
+      })
+
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hameburger.classList.remove("active");
+        navBar.classList.remove("active");
+      }))
+    </script>
+      
+  </body>
+</html>
