@@ -191,38 +191,178 @@
     
 
     }
-    .grid-container{
-      padding-top:40px;
-      display:grid;
-      grid-template-columns: 1fr;
+	      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:sans-serif;
+      }
+      input{
+        display:none;
+      }
+      .container{
+        width:100%;
+        text-align:center;
+      }
+      h1{
+        font-weight:normal;
+        font-size:35px;
+        position:relative;
+        margin: 40px 0;
+      }
+      h1::before{
+        content: '';
+        position:absolute;
+        width:100px;
+        height:3px;
+        background-color:crimson;
+        bottom: -10px;
+        left:50%;
+        transform:translateX(-50%);
+        animation:animate 4s linear infinite;
+      }
+      @keyframes animate{
+        0%{
+          width:100px;
+        }50%{
+          width:200px;
+        }100%{
+          width:100px;
+        }
+      }
 
-      gap:20px;
-      max-width:1000px;
-      margin:0 auto;
-      width:100%;
-      
-    }
-    .grid-container div img{
-      width:100%;
-      height:100%;
-      border-radius:12px;
-    }
-    .grid-container div img:hover{
-      width:100%;
-      height:100%;
-      border-radius:12px;
-      transform: scale(1,1);
-      transition: .3s;
-    }
-    
-    .grid-container div{
-      width:1;
-      border-style:solid;
-      border-color:rgb(182, 182, 97);
-      border-width:3px;
-      border-radius:12px;
+      .top-content{
+        background-color:white;
+        width:90%;
+        margin: 0 auto 20px auto;
+        height:60px;
+        display:flex;
+        align-items:center;
+        border-radius:5px;
+        box-shadow:3px 3px 5px lightgray;
+      }
+      h3{
+        height: 100%;
+        background-color:lightgray;
+        line-height:60px;
+        padding:0 50px;
+        color:white;
+      }
+      label{
+        display:inline-block;
+        height:100%;
+        margin:0 20px;
+        line-height:60px;
+        font-size:18px;
+        color:gray;
+        cursor:pointer;
+        transition:.5s;
+      }
+      label:hover{
+        color:black;
+      }
+      .photo-gallery{
+        width:90%;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap:20px;
+      }
+      .pic{
+        position:relative;
+        height:230px;
+        border-radius:10px;
+        box-shadow: 3px 3px 5px lightgray;
+        cursor:pointer;
+        transition:.5s;
+      }
+      .pic img{
+        width:100%;
+        height:100%;
+        border-radius:10px;
+        transition:.5s;
+      }
+      .pic::before{/*it add a specific content before the targeted class i.e in this case .pic*/
+        content:"PHOTO GALLERY";
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,/*width*/ -50%/*height*/);
+        color:white;
+        font-size:22px;
+        font-weight:bold;
+        width:100%;
+        margin-top:-80px;
+        opacity:0;
+        transition:.3s;
+        transition-delay:.2s;/* transition during hovering back*/
+        z-index:1;
+      }
+      .pic:after{
+        content:"";
+        position:absolute;
+        width:100%;
+        bottom:0;
+        left:0;
+        border-radius:10px;
+        height:0;
+        background-color:rgba(0,0,0,.4);
+        transition:.3s;
+      }
+      .pic:hover::after{
+        height:100%;
 
-    }
+      }
+      .pic:hover::before{
+        margin-top:0;
+        opacity:1;
+      }
+
+
+      #check1:checked ~ .container .photo-gallery .pic{
+        opacity:1;
+        transform:scale(1);
+        position:relative;
+        transition:.5s;
+
+      }
+      #check2:checked ~ .container .photo-gallery .family{
+        transform:scale(1);
+        opacity:1;
+        position:relative;
+      }
+      #check2:checked ~ .container .photo-gallery .child,
+      #check2:checked ~ .container .photo-gallery .place{
+        opacity:0;
+        transform:scale(0);
+        position:absolute;
+        transition:.0s;
+      }    
+      #check3:checked ~ .container .photo-gallery .child{
+        transform:scale(1);
+        opacity:1;
+        position:relative;
+      }
+      #check3:checked ~ .container .photo-gallery .family,
+      #check3:checked ~ .container .photo-gallery .place{
+        opacity:0;
+        transform:scale(0);
+        position:absolute;
+        transition:.0s;
+      }
+      #check4:checked ~ .container .photo-gallery .place{
+        transform:scale(1);
+        opacity:1;
+        position:relative;
+      }
+      #check4:checked ~ .container .photo-gallery .family,
+      #check4:checked ~ .container .photo-gallery .child{
+        opacity:0;
+        transform:scale(0);
+        position:absolute;
+        transition:.0s;
+      }    
+
 
     
 
@@ -403,31 +543,62 @@
           </ul>
         </div>
       <div class="line-720"><img src="images/line_710x10.png"></div>
-      <div class="grid-container">
-        <div id="gaLlary"><img src="images/admin02_600.jpg"></div> 
-        <div><img src="images/admin03_600.jpg"></div> 
-        <div><img src="images/admin04_600.jpg"></div> 
-        <div><img src="images/admin05_600.jpg"></div> 
-        <div><img src="images/admin06_600.jpg"></div> 
-        <div><img src="images/admin07_600.jpg"></div> 
-        <div><img src="images/admin08_900.jpg"></div> 
-        <div><img src="images/admin2022.jpg"></div> 
-        <div><img src="images/admin_2019_2.jpg"></div> 
-        <div><img src="images/admin_2019.jpg"></div> 
-        <div><img src="images/admin_2019_4.jpg"></div> 
-        <div><img src="images/admin_2019_5.jpg"></div>
-        <div><img src="images/admin_2019_6.jpg"></div>
-        <div><img src="images/admin_2020b.jpg"></div>
-        <div><img src="images/admin_2_june_2021.jpg"></div>
-        <div><img src="images/admin_dictionary_900.jpg"></div>
-        <div><img src="images/admin_discipline_900.jpg"></div>
-        <div><img src="images/admin_july23_w.jpg"></div>
-        <div><img src="images/cafe2022.jpg"></div>
-        <div><img src="images/computer_class.jpg"></div>
-
-
-
-      </div>
+      
+	    <input type="radio" name="Photos" id="check1" checked>
+	    <input type="radio" name="Photos" id="check2">
+	    <input type="radio" name="Photos" id="check3">
+	    <input type="radio" name="Photos" id="check4">
+	    <div class="container">
+	      <h1>OUR PHOTO GALLERY</h1>
+	      <div class="top-content">
+	        <h3>Photo Gallery</h3>
+	     
+	          <label for="check1">All Photos</label>
+	          <label for="check2">Family Photos</label>
+	          <label for="check3">Child Photos</label>
+	          <label for="check4">Places Visited</label>
+	        
+	      </div>  
+	
+	        <div class="photo-gallery">
+	            <div class="pic place">
+	              <img src="images/admin02_600.jpg">
+	            </div>
+	            <div class="pic family">
+	              <img src="images/admin03_600.jpg">
+	            </div>
+	            <div class="pic child">
+	              <img src="images/admin04_600.jpg">
+	            </div>
+	            <div class="pic place">
+	              <img src="images/admin05_600.jpg">
+	            </div>
+	            <div class="pic family">
+	              <img src="images/admin06_600.jpg">
+	            </div>
+	            <div class="pic child">
+	              <img src="images/admin07_600.jpg">
+	            </div>
+	            <div class="pic  family">
+	              <img src="images/admin07_600.jpg">
+	            </div>
+	            <div class="pic child">
+	              <img src="images/admin2022.jpg">
+	            </div>
+	            <div class="pic place">
+	              <img src="images/admin_2019.jpg">
+	            </div>
+	            <div class="pic family">
+	              <img src="images/admin_2019_3.jpg">
+	            </div>
+	            <div class="pic child">
+	              <img src="images/admin_2019_4.jpg">
+	            </div>
+	        </div>
+	
+	      
+	    </div>
+  
 
 
 
