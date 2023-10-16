@@ -34,6 +34,7 @@
       display:none;
       font-size:30px;
       font-weight:bold;
+      z-index: 1000;
     }
     
     li{
@@ -51,6 +52,7 @@
       background-color:rgb(77, 10, 10);
       padding:10px;
       border-radius:4px;
+      z-index:1000;
     }
     
     .hameburger.active .bar:nth-child(2){
@@ -65,8 +67,9 @@
   
     .navbar{
       position:fixed;
-      left:-100%;
+      left:-200%;
       top:50px; 
+      z-index: 1000;
     }
     .nav-menu{
       background-color:rgb(121, 37, 37);
@@ -241,6 +244,7 @@
         align-items:center;
         border-radius:5px;
         box-shadow:3px 3px 5px lightgray;
+
       }
       h3{
         height: 100%;
@@ -268,6 +272,7 @@
         display:grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap:20px;
+        z-index: 100;
       }
       .pic{
         position:relative;
@@ -364,7 +369,21 @@
         transition:.0s;
       }    
 
-
+      @media only screen and (max-width:700px){
+        .top-content{
+          flex-direction:column;
+          overflow:auto;
+        }
+        .photo-gallery{
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .top-content{
+          position:sticky;
+          top:5%;
+          z-index:800;
+        }
+          
+      }
     
 
     
